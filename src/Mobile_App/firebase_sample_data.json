@@ -1,0 +1,146 @@
+{
+  "smart_city": {
+    "nodes": {
+      "building": {
+        "online": true,
+        "alert": false,
+        "nodeId": 1,
+        "domain": 1,
+        "packetType": "P",
+        "seq": 42,
+        "uptimeSec": 18640,
+        "batteryMv": 3890,
+        "flags": "00",
+        "rssi": -68,
+        "snr": 9.1,
+        "lastUpdate": 1778346000,
+        "lastRawPacket": "SC1|P|1|1|42|18640|00|27.3|55|450|120|220|48|2500|1008.5|A41F",
+        "values": {
+          "temperature": 27.3,
+          "humidity": 55,
+          "pressure": 1008.5,
+          "airQuality": 450,
+          "smoke": 120,
+          "gas": 220,
+          "soilMoisture": 48,
+          "rain": false
+        }
+      },
+      "bridge": {
+        "online": true,
+        "alert": false,
+        "nodeId": 2,
+        "domain": 2,
+        "packetType": "P",
+        "seq": 38,
+        "uptimeSec": 14320,
+        "batteryMv": 3740,
+        "flags": "00",
+        "rssi": -75,
+        "snr": 7.2,
+        "lastUpdate": 1778346000,
+        "lastRawPacket": "SC1|P|2|2|38|14320|00|3|3600|0|0|0|0|1|7C",
+        "values": {
+          "carsInside": 3,
+          "carsEntered": 10,
+          "carsExited": 7,
+          "dangerSwitch1": false,
+          "dangerSwitch2": false,
+          "dangerSwitch3": false,
+          "dangerSwitch4": false,
+          "gateIn": true,
+          "gateOut": true,
+          "buzzer": false,
+          "roadStatus": "ROAD OPEN"
+        }
+      },
+      "water": {
+        "online": true,
+        "alert": false,
+        "nodeId": 3,
+        "domain": 3,
+        "packetType": "P",
+        "seq": 45,
+        "uptimeSec": 16410,
+        "batteryMv": 3820,
+        "flags": "00",
+        "rssi": -68,
+        "snr": 9.4,
+        "lastUpdate": 1778346000,
+        "lastRawPacket": "SC1|P|3|3|45|16410|00|0|34|80|78|2|0|0|D2",
+        "values": {
+          "rain": false,
+          "pipeSoil": 34,
+          "tank1": 80,
+          "tank2": 78,
+          "difference": 2,
+          "leakStatus": 0,
+          "leakProbability": 5
+        }
+      }
+    },
+    "gateway": {
+      "online": true,
+      "uptime": 22100,
+      "totalPackets": 587,
+      "connectedNodes": 3,
+      "wifiStatus": "Connected",
+      "firebaseStatus": "Synced",
+      "lastRawPacket": "SC1|P|1|1|42|18640|00|27.3|55|450|120|220|48|2500|1008.5|A41F",
+      "lastUpdate": 1778346000,
+      "lastReceivedNode": "building",
+      "nodeTimeout": 120,
+      "nodeHealth": {
+        "building": {
+          "receivedPackets": 198,
+          "lostPackets": 2,
+          "pdr": 98.9,
+          "rssi": -68,
+          "snr": 9.1,
+          "lastSeq": 42,
+          "lastUpdate": 1778345990
+        },
+        "bridge": {
+          "receivedPackets": 195,
+          "lostPackets": 4,
+          "pdr": 96.5,
+          "rssi": -75,
+          "snr": 7.2,
+          "lastSeq": 38,
+          "lastUpdate": 1778345984
+        },
+        "water": {
+          "receivedPackets": 194,
+          "lostPackets": 1,
+          "pdr": 99.0,
+          "rssi": -68,
+          "snr": 9.4,
+          "lastSeq": 45,
+          "lastUpdate": 1778345994
+        }
+      }
+    },
+    "alerts": {
+      "alert_001": {
+        "domain": "water",
+        "nodeId": 3,
+        "severity": "critical",
+        "title": "Water Leak Detected",
+        "message": "Tank difference and pipe soil moisture indicate a probable leak.",
+        "timestamp": 1778345700,
+        "resolved": false,
+        "flags": 25
+      },
+      "alert_002": {
+        "domain": "bridge",
+        "nodeId": 2,
+        "severity": "warning",
+        "title": "Bridge Danger Switch",
+        "message": "Danger switch event packet closed the road and activated the buzzer.",
+        "timestamp": 1778345200,
+        "resolved": true,
+        "flags": 25
+      }
+    }
+  }
+}

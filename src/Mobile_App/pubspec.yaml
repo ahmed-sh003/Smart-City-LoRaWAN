@@ -1,0 +1,57 @@
+name: smartcity_lpwan
+description: Smart City LPWAN Monitoring System - Graduation Project
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Firebase
+  firebase_core: 4.7.0
+  firebase_database: 12.3.0
+  firebase_auth: 6.4.0
+
+  # State management
+  provider: ^6.1.2
+
+  # UI & fonts
+  google_fonts: ^6.2.1
+  fl_chart: ^0.68.0
+  percent_indicator: ^4.2.3
+  tflite_flutter: ^0.12.1
+  google_mlkit_commons: ^0.11.0
+  workmanager: ^0.5.2
+
+  # Utilities
+  intl: ^0.19.0
+  shared_preferences: ^2.2.3
+  flutter_local_notifications: ^21.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/lottie/
+    - assets/ml_models/production_model.tflite
+    - assets/ml_models/alert_scorer.tflite
+    - assets/ml_models/production_model_fp16.tflite
+    - assets/ml_models/production_model_int8.tflite
+    - assets/ml_models/lpwan_packet_loss.tflite
+    - assets/ml_models/lpwan_link_quality.tflite
+    - assets/ml_models/lpwan_gateway_health.tflite
+    - assets/ml_models/lpwan_energy_risk.tflite
+    - assets/ml_models/lpwan_optimal_sf.tflite
+    - assets/ml_models/model_config.json
+    - assets/ml_models/mlops_summary.json
+    - assets/ml_models/enterprise_ai_summary.json
+    - assets/ml_models/lpwan_summary.json

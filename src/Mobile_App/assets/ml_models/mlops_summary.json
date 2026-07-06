@@ -1,0 +1,657 @@
+{
+  "generatedAt": "2026-06-14T06:53:15.078043Z",
+  "modelVersion": "v20260614-phase3-real-data",
+  "status": "attention",
+  "monitoring": {
+    "backend": "keras+tflite_validated",
+    "backendError": null,
+    "inferenceCount": 91343,
+    "referenceRows": 426264,
+    "liveRows": 91343,
+    "averageScore": 0.226671,
+    "p95Score": 0.999999,
+    "threshold": 0.82,
+    "latencyMs": 0.000152,
+    "errorRate": 0,
+    "predictionDistribution": {
+      "normal": 75137,
+      "watch": 2395,
+      "anomaly": 13811
+    }
+  },
+  "drift": {
+    "overallStatus": "low",
+    "featuresDrifted": 0,
+    "highDriftFeatures": 0,
+    "mediumDriftFeatures": 0,
+    "topFeatureDrift": [
+      {
+        "feature": "temp_c",
+        "psi": 0.000187,
+        "referenceMean": 14.091952,
+        "liveMean": 14.040649,
+        "status": "low"
+      },
+      {
+        "feature": "smoke_level",
+        "psi": 0.000138,
+        "referenceMean": 81.475143,
+        "liveMean": 82.522949,
+        "status": "low"
+      },
+      {
+        "feature": "pressure_bar",
+        "psi": 0.000136,
+        "referenceMean": 1.17791,
+        "liveMean": 1.17827,
+        "status": "low"
+      },
+      {
+        "feature": "pipe_temp_c",
+        "psi": 0.000136,
+        "referenceMean": 1.895414,
+        "liveMean": 1.893442,
+        "status": "low"
+      },
+      {
+        "feature": "power_kwh",
+        "psi": 0.000119,
+        "referenceMean": 0.295702,
+        "liveMean": 0.294188,
+        "status": "low"
+      },
+      {
+        "feature": "crack_index",
+        "psi": 0.000118,
+        "referenceMean": 0.005359,
+        "liveMean": 0.005205,
+        "status": "low"
+      },
+      {
+        "feature": "load_weight_ton",
+        "psi": 0.000116,
+        "referenceMean": 1.05032,
+        "liveMean": 1.026419,
+        "status": "low"
+      },
+      {
+        "feature": "humidity_pct",
+        "psi": 0.000106,
+        "referenceMean": 48.015923,
+        "liveMean": 47.957008,
+        "status": "low"
+      }
+    ]
+  },
+  "metrics": {
+    "accuracy": 0.96523,
+    "precision": 0.948302,
+    "recall": 0.841764,
+    "f1": 0.891862,
+    "confusion_matrix": [
+      [
+        75070,
+        714
+      ],
+      [
+        2462,
+        13097
+      ]
+    ],
+    "roc_auc": 0.983882,
+    "brier": 0.039501,
+    "ece": 0.056335,
+    "confidenceMean": 0.863799
+  },
+  "explainability": {
+    "method": "Phase 3 real-data class-separation proxy",
+    "shapStatus": "not_run_by_default; feature drivers are calculated from held-out Phase 3 data",
+    "topFeatures": [
+      {
+        "feature": "co2_ppm",
+        "importance": 1.293072,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "smoke_level",
+        "importance": 0.950187,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "air_humidity_pct",
+        "importance": 0.651266,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "humidity_pct",
+        "importance": 0.574588,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "battery_pct",
+        "importance": 0.418169,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "snr_db",
+        "importance": 0.322093,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "water_level_m",
+        "importance": 0.251678,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "pipe_temp_c",
+        "importance": 0.226669,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "rssi_dbm",
+        "importance": 0.220108,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "flow_rate_lpm",
+        "importance": 0.200715,
+        "direction": "higher risk when reduced"
+      }
+    ],
+    "topContributingFactors": [
+      {
+        "feature": "co2_ppm",
+        "importance": 1.293072,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "smoke_level",
+        "importance": 0.950187,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "air_humidity_pct",
+        "importance": 0.651266,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "humidity_pct",
+        "importance": 0.574588,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "battery_pct",
+        "importance": 0.418169,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "snr_db",
+        "importance": 0.322093,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "water_level_m",
+        "importance": 0.251678,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "pipe_temp_c",
+        "importance": 0.226669,
+        "direction": "higher risk when reduced"
+      }
+    ]
+  },
+  "registry": {
+    "activeVersion": "v20260614-phase3-real-data",
+    "path": "models/registry.json",
+    "latestPath": "models/latest"
+  },
+  "abTesting": {
+    "status": "baseline_only",
+    "activeVersion": "v20260614-phase3-real-data",
+    "candidateVersion": "",
+    "trafficSplit": {
+      "active": 100,
+      "candidate": 0
+    },
+    "decision": "Phase 3 model is active after TFLite validation; collect field telemetry before introducing a candidate split."
+  },
+  "training": {
+    "phase": "Phase 3 Real Data Training Pass",
+    "trainingRows": 608949,
+    "realRows": 473949,
+    "syntheticRows": 135000,
+    "realRatio": 0.778307,
+    "featureCount": 25,
+    "datasetsUsed": {
+      "UCI Beijing Multi-Site Air Quality": 420768,
+      "Phase 1 synthetic telemetry": 135000,
+      "UCI Beijing PM2.5": 43824,
+      "UCI Air Quality Gas Multisensor": 9357
+    }
+  },
+  "recommendations": [
+    "Collect real bridge and water datasets or export more Firebase field telemetry to reduce synthetic dependence.",
+    "Treat real environmental labels as weak labels until incidents are field-confirmed.",
+    "Monitor false positives on gateway/environment telemetry before tightening thresholds."
+  ],
+  "enterprise": {
+    "generatedAt": "2026-06-14T07:22:17.585717Z",
+    "status": "attention",
+    "phaseCoverage": {
+      "data": "cataloged+validated",
+      "features": "feature_store_generated",
+      "forecasting": "benchmarked",
+      "maintenance": "risk_engine_generated",
+      "explainability": "computed",
+      "multiModel": "six_engines_defined",
+      "mlops": "high",
+      "dashboard": "flutter_command_center",
+      "edge": "3_variants",
+      "science": "strong_demo_ready_needs_more_real_bridge_water_for_publication_claims"
+    },
+    "rows": 608949,
+    "realRows": 473949,
+    "syntheticRows": 135000,
+    "realRatio": 0.778307,
+    "catalogedDatasets": 13,
+    "forecastTasks": 16,
+    "bestForecasts": [
+      {
+        "task": "environment_drought_probability",
+        "model": "Persistence",
+        "status": "trained",
+        "rmse": 0.0
+      },
+      {
+        "task": "bridge_crack_growth",
+        "model": "Gradient Boosting",
+        "status": "trained",
+        "rmse": 0.037242
+      },
+      {
+        "task": "network_packet_loss_next_hour",
+        "model": "Ridge",
+        "status": "trained",
+        "rmse": 0.05294
+      },
+      {
+        "task": "water_leak_probability_24h",
+        "model": "Gradient Boosting",
+        "status": "trained",
+        "rmse": 0.060229
+      },
+      {
+        "task": "water_leak_probability_6h",
+        "model": "CatBoost",
+        "status": "trained",
+        "rmse": 0.060935
+      }
+    ],
+    "maintenance": {
+      "assetsEvaluated": 17,
+      "priorityCounts": {
+        "LOW": 17
+      },
+      "topAssets": [
+        {
+          "domain": "building",
+          "nodeId": "uci_air_quality_gas_multisensor",
+          "riskScore": 0.1259,
+          "failureProbability": 0.0,
+          "estimatedRemainingLifeDays": 181.4,
+          "maintenancePriority": "LOW"
+        },
+        {
+          "domain": "gateway",
+          "nodeId": "uci_beijing_multisite_huairou",
+          "riskScore": 0.0852,
+          "failureProbability": 0.0,
+          "estimatedRemainingLifeDays": 186.3,
+          "maintenancePriority": "LOW"
+        },
+        {
+          "domain": "gateway",
+          "nodeId": "uci_beijing_multisite_guanyuan",
+          "riskScore": 0.08,
+          "failureProbability": 0.0,
+          "estimatedRemainingLifeDays": 186.9,
+          "maintenancePriority": "LOW"
+        },
+        {
+          "domain": "gateway",
+          "nodeId": "uci_beijing_multisite_tiantan",
+          "riskScore": 0.0796,
+          "failureProbability": 0.0,
+          "estimatedRemainingLifeDays": 187.0,
+          "maintenancePriority": "LOW"
+        }
+      ]
+    },
+    "rootCause": {
+      "method": "SHAP when available, ExtraTrees feature contribution fallback otherwise",
+      "shapStatus": "computed",
+      "topFeatures": [
+        {
+          "feature": "pollution_score",
+          "importance": 0.311305,
+          "direction": "higher risk when elevated"
+        },
+        {
+          "feature": "air_quality_score",
+          "importance": 0.24114,
+          "direction": "higher risk when elevated"
+        },
+        {
+          "feature": "global_risk_score",
+          "importance": 0.204927,
+          "direction": "higher risk when elevated"
+        },
+        {
+          "feature": "leak_probability_feature",
+          "importance": 0.061695,
+          "direction": "higher risk when reduced"
+        },
+        {
+          "feature": "domain_id",
+          "importance": 0.055325,
+          "direction": "higher risk when elevated"
+        }
+      ],
+      "example": {
+        "riskScore": 0.93,
+        "primaryCause": "Pollution Score",
+        "secondaryCause": "AIR Quality Score",
+        "contributingFactors": [
+          "Global Risk Score",
+          "Leak Probability Feature",
+          "Domain ID"
+        ],
+        "recommendedAction": "Inspect building air-quality, smoke/gas sensors, and ventilation state."
+      }
+    },
+    "advancedMlops": {
+      "featureDriftStatus": "high",
+      "conceptDriftStatus": "medium",
+      "retrainingTriggered": true,
+      "topDriftChecks": [
+        {
+          "feature": "packet_loss_rate",
+          "psi": 0.103208,
+          "ks": 0.014175,
+          "jensenShannon": 0.004876,
+          "status": "medium"
+        },
+        {
+          "feature": "battery_pct",
+          "psi": 0.082567,
+          "ks": 0.874171,
+          "jensenShannon": 0.152543,
+          "status": "high"
+        },
+        {
+          "feature": "rssi_dbm",
+          "psi": 6.085586,
+          "ks": 0.490489,
+          "jensenShannon": 0.299505,
+          "status": "high"
+        },
+        {
+          "feature": "snr_db",
+          "psi": 4.392122,
+          "ks": 0.526892,
+          "jensenShannon": 0.28172,
+          "status": "high"
+        },
+        {
+          "feature": "air_quality_score",
+          "psi": 1.437849,
+          "ks": 0.501918,
+          "jensenShannon": 0.235354,
+          "status": "high"
+        }
+      ]
+    },
+    "edgeAi": {
+      "selectedDeployment": "float32 production_model.tflite retained after Phase 3 parity validation; FP16/INT8 variants available for edge trials.",
+      "variants": [
+        {
+          "name": "float32",
+          "path": "assets/ml_models/production_model.tflite",
+          "sizeBytes": 21380,
+          "status": "active"
+        },
+        {
+          "name": "fp16",
+          "path": "assets/ml_models/production_model_fp16.tflite",
+          "sizeBytes": 14544,
+          "status": "generated"
+        },
+        {
+          "name": "int8",
+          "path": "assets/ml_models/production_model_int8.tflite",
+          "sizeBytes": 12304,
+          "status": "generated"
+        }
+      ]
+    },
+    "scientificValidation": {
+      "publicationReadiness": "strong_demo_ready_needs_more_real_bridge_water_for_publication_claims",
+      "artifacts": [
+        "reports/enterprise_model_comparison_table.csv",
+        "reports/enterprise_confusion_matrix.json",
+        "reports/enterprise_roc_pr_curve_points.json",
+        "reports/enterprise_shap_summary.json",
+        "reports/mlops/enterprise_forecasting_report.md",
+        "reports/mlops/enterprise_predictive_maintenance_report.md",
+        "reports/mlops/enterprise_explainability_report.md"
+      ]
+    },
+    "honestyNotes": [
+      "Kaggle, Mendeley, IEEE Dataport, NOAA, OpenAQ, NASA POWER, and Zenodo rows are not counted as used unless files exist locally or an API snapshot is downloaded.",
+      "Current real rows come from locally present UCI environmental datasets.",
+      "Bridge and water still need real field exports or downloaded benchmark datasets for fully real supervised training."
+    ],
+    "reports": {
+      "final": "reports/mlops/enterprise_final_report.md",
+      "datasetInventory": "reports/mlops/enterprise_dataset_inventory.md",
+      "dataQuality": "reports/mlops/enterprise_data_quality_report.md",
+      "forecasting": "reports/mlops/enterprise_forecasting_report.md",
+      "maintenance": "reports/mlops/enterprise_predictive_maintenance_report.md",
+      "explainability": "reports/mlops/enterprise_explainability_report.md",
+      "advancedMlops": "reports/mlops/enterprise_advanced_mlops_report.md",
+      "edgeAi": "reports/mlops/enterprise_edge_ai_report.md",
+      "science": "reports/mlops/enterprise_scientific_validation_report.md"
+    }
+  },
+  "lpwan": {
+    "generatedAt": "2026-06-14T13:17:40.625948Z",
+    "status": "research_grade",
+    "dataset": {
+      "rowsAvailable": 620000,
+      "rowsUsedForTraining": 150000,
+      "realRows": 620000,
+      "syntheticRows": 0,
+      "realRatio": 1.0,
+      "sourceTypes": {
+        "real_enriched": 520000,
+        "project_telemetry_enriched": 100000
+      },
+      "sourceDatasets": {
+        "LoED: The LoRaWAN at the Edge Dataset": 520000,
+        "Existing SmartCity project telemetry": 100000
+      }
+    },
+    "featureCount": 17,
+    "tasks": {
+      "packet_loss": {
+        "title": "Packet Loss Predictor",
+        "bestModel": "XGBoost",
+        "bestF1": 0.999966,
+        "bestAccuracy": 0.99997,
+        "tflitePath": "assets/ml_models/lpwan_packet_loss.tflite",
+        "tfliteSizeBytes": 8152,
+        "shapStatus": "computed",
+        "topFeatures": [
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 3.117013
+          },
+          {
+            "feature": "packet_loss_rate",
+            "meanAbsShap": 1.118215
+          },
+          {
+            "feature": "crc_ok",
+            "meanAbsShap": 0.826189
+          },
+          {
+            "feature": "delivery_ratio",
+            "meanAbsShap": 0.471076
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 0.455055
+          }
+        ]
+      },
+      "link_quality": {
+        "title": "Link Quality Classifier",
+        "bestModel": "XGBoost",
+        "bestF1": 1.0,
+        "bestAccuracy": 1.0,
+        "tflitePath": "assets/ml_models/lpwan_link_quality.tflite",
+        "tfliteSizeBytes": 8528,
+        "shapStatus": "computed",
+        "topFeatures": [
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 2.266004
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 0.878068
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.135893
+          },
+          {
+            "feature": "crc_ok",
+            "meanAbsShap": 0.052204
+          },
+          {
+            "feature": "packet_received",
+            "meanAbsShap": 0.016989
+          }
+        ]
+      },
+      "gateway_health": {
+        "title": "Gateway Health Classifier",
+        "bestModel": "Random Forest",
+        "bestF1": 1.0,
+        "bestAccuracy": 1.0,
+        "tflitePath": "assets/ml_models/lpwan_gateway_health.tflite",
+        "tfliteSizeBytes": 8432,
+        "shapStatus": "computed",
+        "topFeatures": [
+          {
+            "feature": "obstacle_level",
+            "meanAbsShap": 0.138968
+          },
+          {
+            "feature": "delivery_ratio",
+            "meanAbsShap": 0.092923
+          },
+          {
+            "feature": "environment_code",
+            "meanAbsShap": 0.084707
+          },
+          {
+            "feature": "packet_loss_rate",
+            "meanAbsShap": 0.081532
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.039512
+          }
+        ]
+      },
+      "energy_risk": {
+        "title": "Energy Risk Predictor",
+        "bestModel": "Random Forest",
+        "bestF1": 0.999876,
+        "bestAccuracy": 0.99997,
+        "tflitePath": "assets/ml_models/lpwan_energy_risk.tflite",
+        "tfliteSizeBytes": 8200,
+        "shapStatus": "computed",
+        "topFeatures": [
+          {
+            "feature": "current_ma",
+            "meanAbsShap": 0.246325
+          },
+          {
+            "feature": "spreading_factor",
+            "meanAbsShap": 0.131671
+          },
+          {
+            "feature": "tx_power_dbm",
+            "meanAbsShap": 0.063541
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.017231
+          },
+          {
+            "feature": "environment_code",
+            "meanAbsShap": 0.014791
+          }
+        ]
+      },
+      "optimal_sf": {
+        "title": "Optimal Spreading Factor Classifier",
+        "bestModel": "Gradient Boosting",
+        "bestF1": 0.999922,
+        "bestAccuracy": 0.999939,
+        "tflitePath": "assets/ml_models/lpwan_optimal_sf.tflite",
+        "tfliteSizeBytes": 8720,
+        "shapStatus": "computed",
+        "topFeatures": [
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 5.456415
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 1.289143
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.001629
+          },
+          {
+            "feature": "battery_pct",
+            "meanAbsShap": 0.001191
+          },
+          {
+            "feature": "spreading_factor",
+            "meanAbsShap": 0.001123
+          }
+        ]
+      }
+    },
+    "tfliteAssets": {
+      "packet_loss": "assets/ml_models/lpwan_packet_loss.tflite",
+      "link_quality": "assets/ml_models/lpwan_link_quality.tflite",
+      "gateway_health": "assets/ml_models/lpwan_gateway_health.tflite",
+      "energy_risk": "assets/ml_models/lpwan_energy_risk.tflite",
+      "optimal_sf": "assets/ml_models/lpwan_optimal_sf.tflite"
+    },
+    "reports": {
+      "dataset": "reports/lpwan_dataset_report.md",
+      "models": "reports/lpwan_model_report.md",
+      "summary": "reports/lpwan_model_summary.json",
+      "figures": "reports/lpwan/"
+    }
+  }
+}

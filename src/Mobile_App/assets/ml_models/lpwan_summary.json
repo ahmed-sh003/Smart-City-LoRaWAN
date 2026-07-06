@@ -1,0 +1,190 @@
+{
+  "generatedAt": "2026-06-14T13:17:40.625948Z",
+  "status": "research_grade",
+  "dataset": {
+    "rowsAvailable": 620000,
+    "rowsUsedForTraining": 150000,
+    "realRows": 620000,
+    "syntheticRows": 0,
+    "realRatio": 1.0,
+    "sourceTypes": {
+      "real_enriched": 520000,
+      "project_telemetry_enriched": 100000
+    },
+    "sourceDatasets": {
+      "LoED: The LoRaWAN at the Edge Dataset": 520000,
+      "Existing SmartCity project telemetry": 100000
+    }
+  },
+  "featureCount": 17,
+  "tasks": {
+    "packet_loss": {
+      "title": "Packet Loss Predictor",
+      "bestModel": "XGBoost",
+      "bestF1": 0.999966,
+      "bestAccuracy": 0.99997,
+      "tflitePath": "assets/ml_models/lpwan_packet_loss.tflite",
+      "tfliteSizeBytes": 8152,
+      "shapStatus": "computed",
+      "topFeatures": [
+        {
+          "feature": "snr_db",
+          "meanAbsShap": 3.117013
+        },
+        {
+          "feature": "packet_loss_rate",
+          "meanAbsShap": 1.118215
+        },
+        {
+          "feature": "crc_ok",
+          "meanAbsShap": 0.826189
+        },
+        {
+          "feature": "delivery_ratio",
+          "meanAbsShap": 0.471076
+        },
+        {
+          "feature": "rssi_dbm",
+          "meanAbsShap": 0.455055
+        }
+      ]
+    },
+    "link_quality": {
+      "title": "Link Quality Classifier",
+      "bestModel": "XGBoost",
+      "bestF1": 1.0,
+      "bestAccuracy": 1.0,
+      "tflitePath": "assets/ml_models/lpwan_link_quality.tflite",
+      "tfliteSizeBytes": 8528,
+      "shapStatus": "computed",
+      "topFeatures": [
+        {
+          "feature": "snr_db",
+          "meanAbsShap": 2.266004
+        },
+        {
+          "feature": "rssi_dbm",
+          "meanAbsShap": 0.878068
+        },
+        {
+          "feature": "distance_m",
+          "meanAbsShap": 0.135893
+        },
+        {
+          "feature": "crc_ok",
+          "meanAbsShap": 0.052204
+        },
+        {
+          "feature": "packet_received",
+          "meanAbsShap": 0.016989
+        }
+      ]
+    },
+    "gateway_health": {
+      "title": "Gateway Health Classifier",
+      "bestModel": "Random Forest",
+      "bestF1": 1.0,
+      "bestAccuracy": 1.0,
+      "tflitePath": "assets/ml_models/lpwan_gateway_health.tflite",
+      "tfliteSizeBytes": 8432,
+      "shapStatus": "computed",
+      "topFeatures": [
+        {
+          "feature": "obstacle_level",
+          "meanAbsShap": 0.138968
+        },
+        {
+          "feature": "delivery_ratio",
+          "meanAbsShap": 0.092923
+        },
+        {
+          "feature": "environment_code",
+          "meanAbsShap": 0.084707
+        },
+        {
+          "feature": "packet_loss_rate",
+          "meanAbsShap": 0.081532
+        },
+        {
+          "feature": "distance_m",
+          "meanAbsShap": 0.039512
+        }
+      ]
+    },
+    "energy_risk": {
+      "title": "Energy Risk Predictor",
+      "bestModel": "Random Forest",
+      "bestF1": 0.999876,
+      "bestAccuracy": 0.99997,
+      "tflitePath": "assets/ml_models/lpwan_energy_risk.tflite",
+      "tfliteSizeBytes": 8200,
+      "shapStatus": "computed",
+      "topFeatures": [
+        {
+          "feature": "current_ma",
+          "meanAbsShap": 0.246325
+        },
+        {
+          "feature": "spreading_factor",
+          "meanAbsShap": 0.131671
+        },
+        {
+          "feature": "tx_power_dbm",
+          "meanAbsShap": 0.063541
+        },
+        {
+          "feature": "distance_m",
+          "meanAbsShap": 0.017231
+        },
+        {
+          "feature": "environment_code",
+          "meanAbsShap": 0.014791
+        }
+      ]
+    },
+    "optimal_sf": {
+      "title": "Optimal Spreading Factor Classifier",
+      "bestModel": "Gradient Boosting",
+      "bestF1": 0.999922,
+      "bestAccuracy": 0.999939,
+      "tflitePath": "assets/ml_models/lpwan_optimal_sf.tflite",
+      "tfliteSizeBytes": 8720,
+      "shapStatus": "computed",
+      "topFeatures": [
+        {
+          "feature": "snr_db",
+          "meanAbsShap": 5.456415
+        },
+        {
+          "feature": "rssi_dbm",
+          "meanAbsShap": 1.289143
+        },
+        {
+          "feature": "distance_m",
+          "meanAbsShap": 0.001629
+        },
+        {
+          "feature": "battery_pct",
+          "meanAbsShap": 0.001191
+        },
+        {
+          "feature": "spreading_factor",
+          "meanAbsShap": 0.001123
+        }
+      ]
+    }
+  },
+  "tfliteAssets": {
+    "packet_loss": "assets/ml_models/lpwan_packet_loss.tflite",
+    "link_quality": "assets/ml_models/lpwan_link_quality.tflite",
+    "gateway_health": "assets/ml_models/lpwan_gateway_health.tflite",
+    "energy_risk": "assets/ml_models/lpwan_energy_risk.tflite",
+    "optimal_sf": "assets/ml_models/lpwan_optimal_sf.tflite"
+  },
+  "reports": {
+    "dataset": "reports/lpwan_dataset_report.md",
+    "models": "reports/lpwan_model_report.md",
+    "summary": "reports/lpwan_model_summary.json",
+    "figures": "reports/lpwan/"
+  }
+}

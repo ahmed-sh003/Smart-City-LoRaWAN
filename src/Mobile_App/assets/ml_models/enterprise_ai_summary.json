@@ -1,0 +1,2162 @@
+{
+  "generatedAt": "2026-06-14T07:22:17.585717Z",
+  "inventory": {
+    "catalogSize": 13,
+    "externalFiles": [
+      {
+        "path": "data/external/dataset_catalog.json",
+        "sizeBytes": 12037
+      },
+      {
+        "path": "data/external/uci_air_quality_gas_multisensor/data.csv",
+        "sizeBytes": 756065
+      },
+      {
+        "path": "data/external/uci_air_quality_gas_multisensor/metadata.json",
+        "sizeBytes": 453
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/2A2478DC-8517-4490-9FA7-36F9A7A542BE.JPG",
+        "sizeBytes": 158758
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/data.csv",
+        "sizeBytes": 37769
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Aotizhongxin_20130301-20170228.csv",
+        "sizeBytes": 2835916
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Changping_20130301-20170228.csv",
+        "sizeBytes": 2722295
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Dingling_20130301-20170228.csv",
+        "sizeBytes": 2675856
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Dongsi_20130301-20170228.csv",
+        "sizeBytes": 2636684
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Guanyuan_20130301-20170228.csv",
+        "sizeBytes": 2695860
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Gucheng_20130301-20170228.csv",
+        "sizeBytes": 2654625
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Huairou_20130301-20170228.csv",
+        "sizeBytes": 2641027
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Nongzhanguan_20130301-20170228.csv",
+        "sizeBytes": 2839705
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Shunyi_20130301-20170228.csv",
+        "sizeBytes": 2620654
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Tiantan_20130301-20170228.csv",
+        "sizeBytes": 2655061
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Wanliu_20130301-20170228.csv",
+        "sizeBytes": 2659544
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Wanshouxigong_20130301-20170228.csv",
+        "sizeBytes": 2871076
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228.zip",
+        "sizeBytes": 7959991
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/extracted/test.csv",
+        "sizeBytes": 35186
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/metadata.json",
+        "sizeBytes": 3087
+      },
+      {
+        "path": "data/external/uci_beijing_multisite_air_quality/source.zip",
+        "sizeBytes": 8192212
+      },
+      {
+        "path": "data/external/uci_beijing_pm25/data.csv",
+        "sizeBytes": 2013605
+      },
+      {
+        "path": "data/external/uci_beijing_pm25/metadata.json",
+        "sizeBytes": 359
+      }
+    ],
+    "rows": 608949,
+    "realRows": 473949,
+    "syntheticRows": 135000,
+    "realRatio": 0.778307,
+    "domains": {
+      "gateway": 464592,
+      "bridge": 50000,
+      "water": 50000,
+      "building": 44357
+    },
+    "datasetsUsed": {
+      "UCI Beijing Multi-Site Air Quality": 420768,
+      "Phase 1 synthetic telemetry": 135000,
+      "UCI Beijing PM2.5": 43824,
+      "UCI Air Quality Gas Multisensor": 9357
+    },
+    "catalog": [
+      {
+        "id": "uci_air_quality_gas_multisensor",
+        "name": "UCI Air Quality Gas Multisensor",
+        "source": "UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/360/air%2Bquality",
+        "domain": "building",
+        "features": [
+          "temperature",
+          "humidity",
+          "CO",
+          "NOx",
+          "NO2",
+          "gas sensor proxies"
+        ],
+        "access": "open",
+        "used_status": "used_local"
+      },
+      {
+        "id": "uci_beijing_pm25",
+        "name": "UCI Beijing PM2.5",
+        "source": "UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/381/beijing%2Bpm2%2B5%2Bdata",
+        "domain": "environment",
+        "features": [
+          "PM2.5",
+          "temperature",
+          "pressure",
+          "rain",
+          "wind"
+        ],
+        "access": "open",
+        "used_status": "used_local"
+      },
+      {
+        "id": "uci_beijing_multisite_air_quality",
+        "name": "UCI Beijing Multi-Site Air Quality",
+        "source": "UCI Machine Learning Repository",
+        "url": "https://archive.ics.uci.edu/dataset/501/beijing%2Bmulti%2Bsite%2Bair%2Bquality%2Bdata",
+        "domain": "environment",
+        "features": [
+          "PM2.5",
+          "PM10",
+          "SO2",
+          "NO2",
+          "CO",
+          "O3",
+          "meteorology"
+        ],
+        "access": "open",
+        "used_status": "used_local"
+      },
+      {
+        "id": "openaq_v3_air_quality",
+        "name": "OpenAQ v3 Measurements / Latest",
+        "source": "OpenAQ",
+        "url": "https://docs.openaq.org/resources/measurements",
+        "domain": "environment",
+        "features": [
+          "PM2.5",
+          "PM10",
+          "NO2",
+          "SO2",
+          "CO",
+          "O3"
+        ],
+        "access": "public_api",
+        "used_status": "cataloged_not_used_no_api_snapshot"
+      },
+      {
+        "id": "nasa_power_hourly",
+        "name": "NASA POWER Hourly Meteorology",
+        "source": "NASA POWER",
+        "url": "https://power.larc.nasa.gov/docs/services/api/temporal/hourly/",
+        "domain": "environment",
+        "features": [
+          "temperature",
+          "humidity",
+          "precipitation",
+          "wind",
+          "solar"
+        ],
+        "access": "public_api",
+        "used_status": "cataloged_not_used_no_api_snapshot"
+      },
+      {
+        "id": "noaa_cdo",
+        "name": "NOAA Climate Data Online",
+        "source": "NOAA NCEI",
+        "url": "https://www.ncdc.noaa.gov/cdo-web/webservices/getstarted",
+        "domain": "environment",
+        "features": [
+          "temperature",
+          "precipitation",
+          "wind",
+          "climate normals"
+        ],
+        "access": "token_required",
+        "used_status": "cataloged_not_used_token_required"
+      },
+      {
+        "id": "usepa_wntr_examples",
+        "name": "WNTR / EPANET Example Networks",
+        "source": "USEPA / Open Water Analytics",
+        "url": "https://usepa.github.io/WNTR/examples.html",
+        "domain": "water",
+        "features": [
+          "water network topology",
+          "pressure",
+          "demand",
+          "hydraulic simulation"
+        ],
+        "access": "open_code_models",
+        "used_status": "cataloged_not_used_no_local_hydraulic_scenarios"
+      },
+      {
+        "id": "ditec_wdn",
+        "name": "DiTEC-WDN Hydraulic Scenarios",
+        "source": "Scientific Data / Nature",
+        "url": "https://www.nature.com/articles/s41597-025-06026-0",
+        "domain": "water",
+        "features": [
+          "pressure",
+          "flow",
+          "leak scenarios",
+          "hydraulic snapshots"
+        ],
+        "access": "publication_dataset",
+        "used_status": "cataloged_not_downloaded"
+      },
+      {
+        "id": "zenodo_hbta_bridge",
+        "name": "Hell Bridge Test Arena Benchmark",
+        "source": "Zenodo",
+        "url": "https://zenodo.org/records/14028239",
+        "domain": "bridge",
+        "features": [
+          "dynamic response",
+          "load",
+          "damage states"
+        ],
+        "access": "open_repository",
+        "used_status": "cataloged_not_downloaded"
+      },
+      {
+        "id": "zenodo_vanersborg_bridge",
+        "name": "V\u00e4nersborg Bridge SHM Dataset",
+        "source": "Zenodo",
+        "url": "https://zenodo.org/records/8300495",
+        "domain": "bridge",
+        "features": [
+          "acceleration",
+          "strain",
+          "inclination",
+          "weather",
+          "fracture labels"
+        ],
+        "access": "open_repository",
+        "used_status": "cataloged_not_downloaded"
+      },
+      {
+        "id": "zenodo_kw51_bridge",
+        "name": "Railway Bridge KW51 Monitoring Data",
+        "source": "Zenodo",
+        "url": "https://zenodo.org/records/3745914",
+        "domain": "bridge",
+        "features": [
+          "vibration",
+          "pre/during/post-retrofit states"
+        ],
+        "access": "open_repository",
+        "used_status": "cataloged_not_downloaded"
+      },
+      {
+        "id": "kaggle_water_leak_dataset",
+        "name": "Water Leak Dataset",
+        "source": "Kaggle",
+        "url": "https://www.kaggle.com/datasets/ziya07/water-leak-dataset",
+        "domain": "water",
+        "features": [
+          "leak labels",
+          "water leakage features"
+        ],
+        "access": "kaggle_credentials_required",
+        "used_status": "cataloged_not_used_credentials_required"
+      },
+      {
+        "id": "kaggle_aging_bridge_shm",
+        "name": "Aging Bridge SHM Time-Series Dataset",
+        "source": "Kaggle",
+        "url": "https://www.kaggle.com/datasets/programmer3/aging-bridge-shm-time-series-dataset",
+        "domain": "bridge",
+        "features": [
+          "bridge SHM time-series"
+        ],
+        "access": "kaggle_credentials_required",
+        "used_status": "cataloged_not_used_credentials_required"
+      }
+    ],
+    "honestyNotes": [
+      "Kaggle, Mendeley, IEEE Dataport, NOAA, OpenAQ, NASA POWER, and Zenodo rows are not counted as used unless files exist locally or an API snapshot is downloaded.",
+      "Current real rows come from locally present UCI environmental datasets.",
+      "Bridge and water still need real field exports or downloaded benchmark datasets for fully real supervised training."
+    ]
+  },
+  "quality": {
+    "rows": 608949,
+    "columns": 38,
+    "numericColumns": 25,
+    "duplicateTimestampNodeDomainRows": 0,
+    "nulls": {
+      "domain_id": 0,
+      "pressure_bar": 0,
+      "flow_rate_lpm": 0,
+      "water_level_m": 0,
+      "pipe_temp_c": 0,
+      "leak_detected": 0,
+      "vibration_hz": 0,
+      "tilt_angle_deg": 0,
+      "load_weight_ton": 0,
+      "crack_index": 0,
+      "temp_c": 0,
+      "humidity_pct": 0,
+      "co2_ppm": 0,
+      "power_kwh": 0,
+      "occupancy_count": 0,
+      "smoke_level": 0,
+      "soil_moisture_pct": 0,
+      "soil_temp_c": 0,
+      "air_temp_c": 0,
+      "air_humidity_pct": 0,
+      "irrigation_active": 0,
+      "ndvi_index": 0,
+      "battery_pct": 0,
+      "rssi_dbm": 0,
+      "snr_db": 0
+    },
+    "impossibleValues": {
+      "battery_pct_outside_0_100": 0,
+      "humidity_pct_outside_0_100": 0,
+      "snr_db_extreme": 0,
+      "rssi_dbm_extreme": 0,
+      "negative_pressure": 0,
+      "negative_flow": 80,
+      "negative_water_level": 0
+    },
+    "sensorDriftIndicators": {
+      "rssi_degradation_rate": {
+        "mean": 0.000126,
+        "p95": 0.211667
+      },
+      "snr_trend": {
+        "mean": 7e-06,
+        "p95": 0.130833
+      },
+      "battery_decay_rate": {
+        "mean": 7.1e-05,
+        "p95": 0.03625
+      },
+      "global_risk_score": {
+        "mean": 0.194861,
+        "p95": 0.320985
+      }
+    }
+  },
+  "outliers": {
+    "methods": [
+      {
+        "method": "IQR",
+        "rowsEvaluated": 608949,
+        "outliers": 72034,
+        "outlierRate": 0.118292,
+        "notes": "Fast univariate method; useful for impossible sensor spikes."
+      },
+      {
+        "method": "Isolation Forest",
+        "rowsEvaluated": 30000,
+        "outliers": 5602,
+        "outlierRate": 0.186733,
+        "notes": "Multivariate method; selected for scalable production screening."
+      },
+      {
+        "method": "DBSCAN",
+        "rowsEvaluated": 6000,
+        "outliers": 163,
+        "outlierRate": 0.027167,
+        "notes": "Density method; useful offline but less stable across mixed domains."
+      }
+    ],
+    "selectedForPipeline": "Isolation Forest"
+  },
+  "forecasting": {
+    "sampleRows": 50000,
+    "featureCount": 14,
+    "tasks": {
+      "network_rssi_next_hour": {
+        "target": "rssi_next_hour",
+        "best": {
+          "model": "Ridge",
+          "status": "trained",
+          "metrics": {
+            "mae": 4.158049,
+            "rmse": 6.072169,
+            "r2": -0.012739
+          },
+          "rowsTrain": 39999,
+          "rowsTest": 10000,
+          "runtimeSeconds": 0.022
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.158049,
+              "rmse": 6.072169,
+              "r2": -0.012739
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.022
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.256817,
+              "rmse": 6.181979,
+              "r2": -0.049699
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 1.4
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.397171,
+              "rmse": 6.335723,
+              "r2": -0.10256
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 1.747
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.579659,
+              "rmse": 6.504241,
+              "r2": -0.161992
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.196
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.196282,
+              "rmse": 6.101156,
+              "r2": -0.022431
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.534
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 5.951817,
+              "rmse": 8.459183,
+              "r2": -0.965471
+            },
+            "rowsTest": 10000,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "network_rssi_next_day": {
+        "target": "rssi_next_day",
+        "best": {
+          "model": "Ridge",
+          "status": "trained",
+          "metrics": {
+            "mae": 4.208991,
+            "rmse": 6.189286,
+            "r2": -0.014525
+          },
+          "rowsTrain": 39966,
+          "rowsTest": 9997,
+          "runtimeSeconds": 0.021
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.208991,
+              "rmse": 6.189286,
+              "r2": -0.014525
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.021
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.245202,
+              "rmse": 6.22675,
+              "r2": -0.026844
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.109
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.471647,
+              "rmse": 6.44254,
+              "r2": -0.099248
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.195
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.58764,
+              "rmse": 6.572192,
+              "r2": -0.143937
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.193
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.283864,
+              "rmse": 6.251497,
+              "r2": -0.035022
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.533
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 5.997677,
+              "rmse": 8.583749,
+              "r2": -0.951352
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "network_snr_next_hour": {
+        "target": "snr_next_hour",
+        "best": {
+          "model": "Ridge",
+          "status": "trained",
+          "metrics": {
+            "mae": 1.301424,
+            "rmse": 2.016573,
+            "r2": -0.005547
+          },
+          "rowsTrain": 39999,
+          "rowsTest": 10000,
+          "runtimeSeconds": 0.021
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 1.301424,
+              "rmse": 2.016573,
+              "r2": -0.005547
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.021
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 1.31903,
+              "rmse": 2.035664,
+              "r2": -0.024677
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.097
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 1.391214,
+              "rmse": 2.106919,
+              "r2": -0.097666
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.188
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 1.440202,
+              "rmse": 2.160626,
+              "r2": -0.15434
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.215
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 1.329384,
+              "rmse": 2.053299,
+              "r2": -0.042507
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.444
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 1.876412,
+              "rmse": 2.830082,
+              "r2": -0.98049
+            },
+            "rowsTest": 10000,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "network_packet_loss_next_hour": {
+        "target": "packet_loss_next_hour",
+        "best": {
+          "model": "Ridge",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.012694,
+            "rmse": 0.05294,
+            "r2": -0.020374
+          },
+          "rowsTrain": 39999,
+          "rowsTest": 10000,
+          "runtimeSeconds": 0.02
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.012694,
+              "rmse": 0.05294,
+              "r2": -0.020374
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.02
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.012533,
+              "rmse": 0.053203,
+              "r2": -0.030514
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.089
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.018178,
+              "rmse": 0.057687,
+              "r2": -0.211557
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.217
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.020599,
+              "rmse": 0.05628,
+              "r2": -0.153161
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.213
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.01375,
+              "rmse": 0.054218,
+              "r2": -0.07023
+            },
+            "rowsTrain": 39999,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.492
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.011853,
+              "rmse": 0.074234,
+              "r2": -1.006275
+            },
+            "rowsTest": 10000,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "battery_remaining_pct": {
+        "target": "battery_remaining_pct",
+        "best": {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "mae": 2.554769,
+            "rmse": 7.897043,
+            "r2": 0.000269
+          },
+          "rowsTrain": 40000,
+          "rowsTest": 10000,
+          "runtimeSeconds": 0.09
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 2.735224,
+              "rmse": 7.942722,
+              "r2": -0.01133
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.007
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 2.554769,
+              "rmse": 7.897043,
+              "r2": 0.000269
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.09
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 2.525603,
+              "rmse": 8.086328,
+              "r2": -0.04823
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.195
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 2.64263,
+              "rmse": 8.096659,
+              "r2": -0.050911
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.196
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 2.455772,
+              "rmse": 8.098456,
+              "r2": -0.051377
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.394
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 3.246154,
+              "rmse": 11.168387,
+              "r2": -0.999562
+            },
+            "rowsTest": 10000,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "days_to_battery_failure": {
+        "target": "days_to_battery_failure",
+        "best": {
+          "model": "LightGBM",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.582653,
+            "rmse": 1.959364,
+            "r2": 0.998019
+          },
+          "rowsTrain": 40000,
+          "rowsTest": 10000,
+          "runtimeSeconds": 0.152
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 33.559555,
+              "rmse": 41.937611,
+              "r2": 0.092496
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.014
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 5.549168,
+              "rmse": 9.333251,
+              "r2": 0.955052
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.125
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 5.550621,
+              "rmse": 9.240039,
+              "r2": 0.955946
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.181
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.582653,
+              "rmse": 1.959364,
+              "r2": 0.998019
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.152
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 1.121851,
+              "rmse": 2.213121,
+              "r2": 0.997473
+            },
+            "rowsTrain": 40000,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.444
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 42.54741,
+              "rmse": 62.079385,
+              "r2": -0.988547
+            },
+            "rowsTest": 10000,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "water_leak_probability_6h": {
+        "target": "leak_probability_next_6h",
+        "best": {
+          "model": "CatBoost",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.017384,
+            "rmse": 0.060935,
+            "r2": 0.569177
+          },
+          "rowsTrain": 39991,
+          "rowsTest": 10000,
+          "runtimeSeconds": 0.515
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.021889,
+              "rmse": 0.064513,
+              "r2": 0.517108
+            },
+            "rowsTrain": 39991,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.016
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.018473,
+              "rmse": 0.061051,
+              "r2": 0.567541
+            },
+            "rowsTrain": 39991,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.125
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.017347,
+              "rmse": 0.061363,
+              "r2": 0.563112
+            },
+            "rowsTrain": 39991,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.219
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.021464,
+              "rmse": 0.061975,
+              "r2": 0.554347
+            },
+            "rowsTrain": 39991,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.128
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.017384,
+              "rmse": 0.060935,
+              "r2": 0.569177
+            },
+            "rowsTrain": 39991,
+            "rowsTest": 10000,
+            "runtimeSeconds": 0.515
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.076594,
+              "rmse": 0.133385,
+              "r2": -1.0643
+            },
+            "rowsTest": 10000,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "water_leak_probability_24h": {
+        "target": "leak_probability_next_24h",
+        "best": {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.017048,
+            "rmse": 0.060229,
+            "r2": 0.575354
+          },
+          "rowsTrain": 39966,
+          "rowsTest": 9997,
+          "runtimeSeconds": 0.126
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.025058,
+              "rmse": 0.063699,
+              "r2": 0.525013
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.019
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.017048,
+              "rmse": 0.060229,
+              "r2": 0.575354
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.126
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.016914,
+              "rmse": 0.061851,
+              "r2": 0.552185
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.229
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.01871,
+              "rmse": 0.061052,
+              "r2": 0.563673
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.132
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.018332,
+              "rmse": 0.060662,
+              "r2": 0.569229
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.481
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.076463,
+              "rmse": 0.131821,
+              "r2": -1.034131
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "bridge_crack_growth": {
+        "target": "crack_growth_next",
+        "best": {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.008873,
+            "rmse": 0.037242,
+            "r2": 0.030833
+          },
+          "rowsTrain": 39966,
+          "rowsTest": 9997,
+          "runtimeSeconds": 0.061
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.011332,
+              "rmse": 0.03763,
+              "r2": 0.01051
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.026
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.008873,
+              "rmse": 0.037242,
+              "r2": 0.030833
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.061
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.011043,
+              "rmse": 0.040465,
+              "r2": -0.144192
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.201
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.012471,
+              "rmse": 0.039755,
+              "r2": -0.104368
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.166
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.009527,
+              "rmse": 0.037649,
+              "r2": 0.009511
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.41
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.013097,
+              "rmse": 0.053703,
+              "r2": -1.015303
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "bridge_vibration_increase": {
+        "target": "vibration_increase_next",
+        "best": {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "mae": 3.972272,
+            "rmse": 16.196596,
+            "r2": 0.082805
+          },
+          "rowsTrain": 39966,
+          "rowsTest": 9997,
+          "runtimeSeconds": 0.09
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.988302,
+              "rmse": 16.402353,
+              "r2": 0.059354
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.021
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 3.972272,
+              "rmse": 16.196596,
+              "r2": 0.082805
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.09
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.3288,
+              "rmse": 17.289133,
+              "r2": -0.045106
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.201
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.400399,
+              "rmse": 16.29194,
+              "r2": 0.071975
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.216
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 4.156676,
+              "rmse": 17.18813,
+              "r2": -0.032931
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.523
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 7.653908,
+              "rmse": 23.446639,
+              "r2": -0.922097
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "bridge_structural_failure_risk": {
+        "target": "structural_failure_risk",
+        "best": {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.024723,
+            "rmse": 0.077615,
+            "r2": 0.471568
+          },
+          "rowsTrain": 39966,
+          "rowsTest": 9997,
+          "runtimeSeconds": 0.105
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.045459,
+              "rmse": 0.094868,
+              "r2": 0.210509
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.021
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.024723,
+              "rmse": 0.077615,
+              "r2": 0.471568
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.105
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.031928,
+              "rmse": 0.0877,
+              "r2": 0.325316
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.188
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.030597,
+              "rmse": 0.08028,
+              "r2": 0.434644
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.18
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.02875,
+              "rmse": 0.085735,
+              "r2": 0.355206
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.509
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.083725,
+              "rmse": 0.149429,
+              "r2": -0.958718
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "environment_air_quality_tomorrow": {
+        "target": "air_quality_tomorrow",
+        "best": {
+          "model": "XGBoost",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.051089,
+            "rmse": 0.086933,
+            "r2": 0.826907
+          },
+          "rowsTrain": 39966,
+          "rowsTest": 9997,
+          "runtimeSeconds": 0.248
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.084152,
+              "rmse": 0.132573,
+              "r2": 0.59745
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.023
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.052018,
+              "rmse": 0.088933,
+              "r2": 0.818849
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.391
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.051089,
+              "rmse": 0.086933,
+              "r2": 0.826907
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.248
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.052333,
+              "rmse": 0.08996,
+              "r2": 0.814642
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.147
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.05418,
+              "rmse": 0.09189,
+              "r2": 0.806605
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.564
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.21934,
+              "rmse": 0.29231,
+              "r2": -0.957041
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "environment_pollution_tomorrow": {
+        "target": "pollution_tomorrow",
+        "best": {
+          "model": "XGBoost",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.034292,
+            "rmse": 0.063846,
+            "r2": 0.793794
+          },
+          "rowsTrain": 39966,
+          "rowsTest": 9997,
+          "runtimeSeconds": 0.243
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.067291,
+              "rmse": 0.099081,
+              "r2": 0.503397
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.02
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.034569,
+              "rmse": 0.064593,
+              "r2": 0.78894
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.396
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.034292,
+              "rmse": 0.063846,
+              "r2": 0.793794
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.243
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.033505,
+              "rmse": 0.064605,
+              "r2": 0.788861
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.16
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.036185,
+              "rmse": 0.068547,
+              "r2": 0.76231
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.534
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.145393,
+              "rmse": 0.197331,
+              "r2": -0.969796
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "environment_drought_probability": {
+        "target": "drought_probability",
+        "best": {
+          "model": "Persistence",
+          "status": "trained",
+          "metrics": {
+            "mae": 0.0,
+            "rmse": 0.0,
+            "r2": 1.0
+          },
+          "rowsTest": 9997,
+          "runtimeSeconds": 0
+        },
+        "candidates": [
+          {
+            "model": "Ridge",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.000363,
+              "rmse": 0.000505,
+              "r2": 0.0
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.027
+          },
+          {
+            "model": "Gradient Boosting",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.000331,
+              "rmse": 0.000333,
+              "r2": 0.0
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.112
+          },
+          {
+            "model": "XGBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 8.7e-05,
+              "rmse": 0.000213,
+              "r2": 0.0
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.242
+          },
+          {
+            "model": "LightGBM",
+            "status": "trained",
+            "metrics": {
+              "mae": 8.7e-05,
+              "rmse": 0.000375,
+              "r2": 0.0
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.138
+          },
+          {
+            "model": "CatBoost",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.000144,
+              "rmse": 0.000173,
+              "r2": 0.0
+            },
+            "rowsTrain": 39966,
+            "rowsTest": 9997,
+            "runtimeSeconds": 0.522
+          },
+          {
+            "model": "Persistence",
+            "status": "trained",
+            "metrics": {
+              "mae": 0.0,
+              "rmse": 0.0,
+              "r2": 1.0
+            },
+            "rowsTest": 9997,
+            "runtimeSeconds": 0
+          }
+        ]
+      },
+      "global_risk_lstm_sequence": {
+        "status": "trained",
+        "model": "Compact LSTM",
+        "target": "global_risk_score",
+        "metrics": {
+          "mae": 0.050402,
+          "rmse": 0.070329,
+          "r2": -0.139689
+        },
+        "sequenceLength": 12,
+        "rowsTrain": 3600,
+        "rowsTest": 900,
+        "runtimeSeconds": 2.118
+      },
+      "temporal_fusion_transformer": {
+        "status": "blueprint_registered",
+        "reason": "pytorch-forecasting/Temporal Fusion Transformer is not installed in this environment; architecture and features are documented for GPU/server training.",
+        "features": [
+          "domain_id",
+          "packet_loss_rate",
+          "rssi_dbm",
+          "snr_db",
+          "battery_pct",
+          "battery_decay_rate",
+          "rssi_degradation_rate",
+          "snr_trend",
+          "air_quality_score",
+          "leak_probability_feature",
+          "structural_stress_score",
+          "climate_index",
+          "drought_score",
+          "pollution_score"
+        ],
+        "targets": [
+          "network_rssi_next_hour",
+          "network_rssi_next_day",
+          "network_snr_next_hour",
+          "network_packet_loss_next_hour",
+          "battery_remaining_pct",
+          "days_to_battery_failure",
+          "water_leak_probability_6h",
+          "water_leak_probability_24h",
+          "bridge_crack_growth",
+          "bridge_vibration_increase",
+          "bridge_structural_failure_risk",
+          "environment_air_quality_tomorrow",
+          "environment_pollution_tomorrow",
+          "environment_drought_probability"
+        ]
+      }
+    }
+  },
+  "maintenance": {
+    "model": {
+      "model": "Gradient Boosting Maintenance Classifier",
+      "status": "trained",
+      "metrics": {
+        "accuracy": 0.999467,
+        "precision": 0.972696,
+        "recall": 1.0,
+        "f1": 0.986159,
+        "roc_auc": 0.999728
+      },
+      "rowsTrain": 60000,
+      "rowsTest": 15000,
+      "runtimeSeconds": 2.909
+    },
+    "assetsEvaluated": 17,
+    "priorityCounts": {
+      "LOW": 17
+    },
+    "topAssets": [
+      {
+        "domain": "building",
+        "nodeId": "uci_air_quality_gas_multisensor",
+        "riskScore": 0.1259,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 181.4,
+        "maintenancePriority": "LOW"
+      },
+      {
+        "domain": "gateway",
+        "nodeId": "uci_beijing_multisite_huairou",
+        "riskScore": 0.0852,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 186.3,
+        "maintenancePriority": "LOW"
+      },
+      {
+        "domain": "gateway",
+        "nodeId": "uci_beijing_multisite_guanyuan",
+        "riskScore": 0.08,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 186.9,
+        "maintenancePriority": "LOW"
+      },
+      {
+        "domain": "gateway",
+        "nodeId": "uci_beijing_multisite_tiantan",
+        "riskScore": 0.0796,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 187.0,
+        "maintenancePriority": "LOW"
+      },
+      {
+        "domain": "gateway",
+        "nodeId": "uci_beijing_multisite_wanliu",
+        "riskScore": 0.0794,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 187.0,
+        "maintenancePriority": "LOW"
+      },
+      {
+        "domain": "gateway",
+        "nodeId": "uci_beijing_multisite_wanshouxigong",
+        "riskScore": 0.0788,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 187.0,
+        "maintenancePriority": "LOW"
+      },
+      {
+        "domain": "gateway",
+        "nodeId": "uci_beijing_multisite_dongsi",
+        "riskScore": 0.0788,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 187.0,
+        "maintenancePriority": "LOW"
+      },
+      {
+        "domain": "gateway",
+        "nodeId": "uci_beijing_multisite_aotizhongxin",
+        "riskScore": 0.0785,
+        "failureProbability": 0.0,
+        "estimatedRemainingLifeDays": 187.1,
+        "maintenancePriority": "LOW"
+      }
+    ]
+  },
+  "rootCause": {
+    "status": "generated",
+    "method": "SHAP when available, ExtraTrees feature contribution fallback otherwise",
+    "shapStatus": "computed",
+    "topFeatures": [
+      {
+        "feature": "pollution_score",
+        "importance": 0.311305,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "air_quality_score",
+        "importance": 0.24114,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "global_risk_score",
+        "importance": 0.204927,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "leak_probability_feature",
+        "importance": 0.061695,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "domain_id",
+        "importance": 0.055325,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "battery_pct",
+        "importance": 0.030279,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "structural_stress_score",
+        "importance": 0.029281,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "drought_score",
+        "importance": 0.026789,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "packet_loss_rate",
+        "importance": 0.015497,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "rssi_dbm",
+        "importance": 0.012266,
+        "direction": "higher risk when elevated"
+      }
+    ],
+    "shapSummary": [
+      {
+        "feature": "pollution_score",
+        "meanAbsShap": 0.087168
+      },
+      {
+        "feature": "global_risk_score",
+        "meanAbsShap": 0.051995
+      },
+      {
+        "feature": "air_quality_score",
+        "meanAbsShap": 0.026017
+      },
+      {
+        "feature": "domain_id",
+        "meanAbsShap": 0.024091
+      },
+      {
+        "feature": "leak_probability_feature",
+        "meanAbsShap": 0.022903
+      },
+      {
+        "feature": "drought_score",
+        "meanAbsShap": 0.011581
+      },
+      {
+        "feature": "battery_pct",
+        "meanAbsShap": 0.004554
+      },
+      {
+        "feature": "structural_stress_score",
+        "meanAbsShap": 0.003363
+      },
+      {
+        "feature": "packet_loss_rate",
+        "meanAbsShap": 0.002133
+      },
+      {
+        "feature": "rssi_dbm",
+        "meanAbsShap": 0.001446
+      }
+    ],
+    "example": {
+      "riskScore": 0.93,
+      "primaryCause": "Pollution Score",
+      "secondaryCause": "AIR Quality Score",
+      "contributingFactors": [
+        "Global Risk Score",
+        "Leak Probability Feature",
+        "Domain ID"
+      ],
+      "recommendedAction": "Inspect building air-quality, smoke/gas sensors, and ventilation state."
+    }
+  },
+  "architecture": {
+    "engines": [
+      {
+        "id": "network_health_predictor",
+        "name": "AI Engine 1 - Network Health Predictor",
+        "inputs": [
+          "RSSI",
+          "SNR",
+          "packet loss",
+          "node uptime"
+        ],
+        "outputs": [
+          "RSSI next hour",
+          "SNR next hour",
+          "communication failure probability"
+        ]
+      },
+      {
+        "id": "battery_rul_predictor",
+        "name": "AI Engine 2 - Battery RUL Predictor",
+        "inputs": [
+          "battery percentage",
+          "battery decay rate",
+          "RSSI",
+          "domain"
+        ],
+        "outputs": [
+          "remaining battery %",
+          "days to battery failure"
+        ]
+      },
+      {
+        "id": "water_leak_predictor",
+        "name": "AI Engine 3 - Water Leak Predictor",
+        "inputs": [
+          "pipe soil",
+          "tank levels",
+          "difference",
+          "rain",
+          "leak status"
+        ],
+        "outputs": [
+          "leak probability 6h",
+          "leak probability 24h"
+        ]
+      },
+      {
+        "id": "bridge_health_predictor",
+        "name": "AI Engine 4 - Bridge Health Predictor",
+        "inputs": [
+          "cars inside",
+          "danger switches",
+          "vibration",
+          "tilt",
+          "gate state"
+        ],
+        "outputs": [
+          "structural stress score",
+          "failure risk",
+          "maintenance priority"
+        ]
+      },
+      {
+        "id": "environment_forecasting",
+        "name": "AI Engine 5 - Environmental Forecasting",
+        "inputs": [
+          "temperature",
+          "humidity",
+          "pressure",
+          "air quality",
+          "smoke/gas"
+        ],
+        "outputs": [
+          "air quality tomorrow",
+          "pollution score",
+          "drought probability"
+        ]
+      },
+      {
+        "id": "global_smart_city_risk",
+        "name": "AI Engine 6 - Global Smart City Risk Engine",
+        "inputs": [
+          "all engine outputs",
+          "TFLite anomaly score",
+          "alerts",
+          "gateway health"
+        ],
+        "outputs": [
+          "global risk score",
+          "root cause",
+          "recommended action"
+        ]
+      }
+    ],
+    "fusionStrategy": "weighted risk fusion with domain-specific guardrails and TFLite anomaly score",
+    "deployment": "Flutter displays command-center results; Python pipeline regenerates model/report assets."
+  },
+  "mlops": {
+    "featureDrift": {
+      "overallStatus": "high",
+      "highFeatures": 7,
+      "mediumFeatures": 1,
+      "checks": [
+        {
+          "feature": "packet_loss_rate",
+          "psi": 0.103208,
+          "ks": 0.014175,
+          "jensenShannon": 0.004876,
+          "status": "medium"
+        },
+        {
+          "feature": "battery_pct",
+          "psi": 0.082567,
+          "ks": 0.874171,
+          "jensenShannon": 0.152543,
+          "status": "high"
+        },
+        {
+          "feature": "rssi_dbm",
+          "psi": 6.085586,
+          "ks": 0.490489,
+          "jensenShannon": 0.299505,
+          "status": "high"
+        },
+        {
+          "feature": "snr_db",
+          "psi": 4.392122,
+          "ks": 0.526892,
+          "jensenShannon": 0.28172,
+          "status": "high"
+        },
+        {
+          "feature": "air_quality_score",
+          "psi": 1.437849,
+          "ks": 0.501918,
+          "jensenShannon": 0.235354,
+          "status": "high"
+        },
+        {
+          "feature": "leak_probability_feature",
+          "psi": 4.410294,
+          "ks": 0.827498,
+          "jensenShannon": 0.468057,
+          "status": "high"
+        },
+        {
+          "feature": "structural_stress_score",
+          "psi": 2.558592,
+          "ks": 0.328433,
+          "jensenShannon": 0.130064,
+          "status": "high"
+        },
+        {
+          "feature": "global_risk_score",
+          "psi": 0.979645,
+          "ks": 0.321837,
+          "jensenShannon": 0.154214,
+          "status": "high"
+        }
+      ]
+    },
+    "conceptDrift": {
+      "status": "medium",
+      "adwinProxyDelta": 0.077895,
+      "ddmProxyWarning": false,
+      "earlyAnomalyRate": 0.209286,
+      "lateAnomalyRate": 0.13139
+    },
+    "monitoringTargets": {
+      "accuracy": "tracked from validation and field-confirmed alerts",
+      "precision": "tracked from validation and field-confirmed alerts",
+      "recall": "tracked from validation and field-confirmed alerts",
+      "f1": "automatic retraining review when F1 drops below 0.85",
+      "latency": "native TFLite per-sample latency tracked in reports",
+      "throughput": "batch score count per run",
+      "errorRate": "Flutter inference/backend loading failures"
+    },
+    "automaticRetraining": {
+      "triggeredNow": true,
+      "rules": [
+        "PSI > 0.25",
+        "KS > 0.25",
+        "Jensen-Shannon > 0.10",
+        "F1 below threshold",
+        "concept drift high"
+      ]
+    }
+  },
+  "edgeAi": {
+    "variants": [
+      {
+        "name": "float32",
+        "path": "assets/ml_models/production_model.tflite",
+        "sizeBytes": 21380,
+        "status": "active"
+      },
+      {
+        "name": "fp16",
+        "path": "assets/ml_models/production_model_fp16.tflite",
+        "sizeBytes": 14544,
+        "status": "generated"
+      },
+      {
+        "name": "int8",
+        "path": "assets/ml_models/production_model_int8.tflite",
+        "sizeBytes": 12304,
+        "status": "generated"
+      }
+    ],
+    "selectedDeployment": "float32 production_model.tflite retained after Phase 3 parity validation; FP16/INT8 variants available for edge trials."
+  },
+  "scientificValidation": {
+    "publicationReadiness": "strong_demo_ready_needs_more_real_bridge_water_for_publication_claims",
+    "generatedArtifacts": [
+      "reports/enterprise_model_comparison_table.csv",
+      "reports/enterprise_confusion_matrix.json",
+      "reports/enterprise_roc_pr_curve_points.json",
+      "reports/enterprise_shap_summary.json",
+      "reports/mlops/enterprise_forecasting_report.md",
+      "reports/mlops/enterprise_predictive_maintenance_report.md",
+      "reports/mlops/enterprise_explainability_report.md"
+    ],
+    "modelComparisonRows": [
+      {
+        "model": "Logistic Regression",
+        "f1": 0.750865,
+        "precision": 0.659186,
+        "recall": 0.872164,
+        "rocAuc": 0.961135,
+        "latencyMs": 0.000383,
+        "sizeBytes": 1797
+      },
+      {
+        "model": "Random Forest",
+        "f1": 0.862571,
+        "precision": 0.798294,
+        "recall": 0.938107,
+        "rocAuc": 0.989267,
+        "latencyMs": 0.021855,
+        "sizeBytes": 32427327
+      },
+      {
+        "model": "Gradient Boosting",
+        "f1": 0.724009,
+        "precision": 0.576304,
+        "recall": 0.97352,
+        "rocAuc": 0.985668,
+        "latencyMs": 0.002104,
+        "sizeBytes": 396813
+      },
+      {
+        "model": "Extra Trees",
+        "f1": 0.837998,
+        "precision": 0.762857,
+        "recall": 0.929558,
+        "rocAuc": 0.984184,
+        "latencyMs": 0.028266,
+        "sizeBytes": 46156182
+      },
+      {
+        "model": "Small Neural Network",
+        "f1": 0.891862,
+        "precision": 0.948302,
+        "recall": 0.841764,
+        "rocAuc": 0.983882,
+        "latencyMs": 0.079514,
+        "sizeBytes": 91603
+      }
+    ],
+    "forecastingTasks": 16,
+    "maintenanceAssets": 17
+  },
+  "featureStore": "data/processed/enterprise_feature_store.parquet"
+}
