@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-06-14T06:17:31.105032Z",
+  "mode": "dry_run",
+  "target_version": "v20260614-phase2",
+  "steps": [
+    {
+      "name": "catalog_external_datasets",
+      "command": [
+        "D:\\Desktop\\New folder (4)\\smartcity_lpwan\\.venv_ai_win\\Scripts\\python.exe",
+        "scripts/mlops/01_public_dataset_catalog.py"
+      ],
+      "purpose": "Search/catalog public SmartCity, IoT, LPWAN, environmental, water, and SHM datasets.",
+      "status": "planned",
+      "runtime_seconds": 0
+    },
+    {
+      "name": "generate_or_refresh_raw_telemetry",
+      "command": [
+        "D:\\Desktop\\New folder (4)\\smartcity_lpwan\\.venv_ai_win\\Scripts\\python.exe",
+        "scripts/data_pipeline/01_generate_and_export.py"
+      ],
+      "purpose": "Export Firebase telemetry or generate fallback synthetic telemetry.",
+      "status": "planned",
+      "runtime_seconds": 0
+    },
+    {
+      "name": "clean_and_engineer_features",
+      "command": [
+        "D:\\Desktop\\New folder (4)\\smartcity_lpwan\\.venv_ai_win\\Scripts\\python.exe",
+        "scripts/data_pipeline/02_clean_and_engineer.py"
+      ],
+      "purpose": "Clean merged data and rebuild runtime/offline features.",
+      "status": "planned",
+      "runtime_seconds": 0
+    },
+    {
+      "name": "train_models",
+      "command": [
+        "D:\\Desktop\\New folder (4)\\smartcity_lpwan\\.venv_ai_win\\Scripts\\python.exe",
+        "scripts/ml/03_train_models.py"
+      ],
+      "purpose": "Train RF, XGBoost, LightGBM, CatBoost when available, and compact neural models.",
+      "status": "planned",
+      "runtime_seconds": 0
+    },
+    {
+      "name": "convert_to_tflite",
+      "command": [
+        "D:\\Desktop\\New folder (4)\\smartcity_lpwan\\.venv_ai_win\\Scripts\\python.exe",
+        "scripts/ml/04_convert_to_tflite.py"
+      ],
+      "purpose": "Regenerate production Flutter TFLite assets.",
+      "status": "planned",
+      "runtime_seconds": 0
+    },
+    {
+      "name": "validate_tflite",
+      "command": [
+        "D:\\Desktop\\New folder (4)\\smartcity_lpwan\\.venv_ai_win\\Scripts\\python.exe",
+        "scripts/ml/05_validate_tflite.py"
+      ],
+      "purpose": "Validate TFLite parity, latency, and threshold behavior.",
+      "status": "planned",
+      "runtime_seconds": 0
+    },
+    {
+      "name": "monitoring_and_explainability",
+      "command": [
+        "D:\\Desktop\\New folder (4)\\smartcity_lpwan\\.venv_ai_win\\Scripts\\python.exe",
+        "scripts/mlops/02_monitoring_and_explainability.py"
+      ],
+      "purpose": "Regenerate drift, monitoring, explainability, and Flutter MLOps summary artifacts.",
+      "status": "planned",
+      "runtime_seconds": 0
+    }
+  ]
+}

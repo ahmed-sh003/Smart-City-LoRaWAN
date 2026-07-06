@@ -1,0 +1,6 @@
+domain,display_name,node_count,primary_sensor,description
+water,Water Network,1,pressure_bar,"Pressure, flow, tank level, pipe temperature, and leak state."
+bridge,Bridge & Road,1,vibration_hz,"Vibration, tilt, structural load, crack index, temperature, and humidity."
+building,Building,1,temp_c,"Indoor climate, air quality, power, occupancy, and smoke."
+agriculture,Smart Agriculture,1,soil_moisture_pct,"Soil moisture, soil temperature, air climate, irrigation, and NDVI."
+gateway,LoRa Gateway,1,avg_rssi,"Connected nodes, packet loss, uptime, RSSI/SNR, and data volume."

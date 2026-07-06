@@ -1,0 +1,294 @@
+{
+  "generated_at": "2026-06-14T06:21:06.433070Z",
+  "datasets": [
+    {
+      "id": "uci_beijing_multisite_air_quality",
+      "name": "Beijing Multi-Site Air Quality",
+      "source": "UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/501/beijing%2Bmulti%2Bsite%2Bair%2Bquality%2Bdata",
+      "license": "CC BY 4.0",
+      "uci_id": 501,
+      "direct_download_url": "https://archive.ics.uci.edu/static/public/501/beijing+multi+site+air+quality+data.zip",
+      "domain_fit": [
+        "building",
+        "environment"
+      ],
+      "row_estimate": 420768,
+      "hardware_alignment": [
+        "temperature",
+        "humidity",
+        "pressure",
+        "rain",
+        "airQuality"
+      ],
+      "status": "cataloged",
+      "download_mode": "open_ucimlrepo"
+    },
+    {
+      "id": "uci_air_quality_gas_multisensor",
+      "name": "Air Quality Gas Multisensor",
+      "source": "UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/360/air%2Bquality",
+      "license": "research only on UCI page",
+      "uci_id": 360,
+      "direct_download_url": "https://archive.ics.uci.edu/static/public/360/air+quality.zip",
+      "domain_fit": [
+        "building"
+      ],
+      "row_estimate": 9358,
+      "hardware_alignment": [
+        "MQ135 air quality",
+        "MQ2/MQ5 gas proxy",
+        "temperature",
+        "humidity"
+      ],
+      "status": "cataloged",
+      "download_mode": "open_ucimlrepo"
+    },
+    {
+      "id": "uci_beijing_pm25",
+      "name": "Beijing PM2.5",
+      "source": "UCI Machine Learning Repository",
+      "url": "https://archive.ics.uci.edu/dataset/381/beijing%2Bpm2%2B5%2Bdata",
+      "license": "UCI listed dataset",
+      "uci_id": 381,
+      "direct_download_url": "https://archive.ics.uci.edu/static/public/381/beijing+pm2+5+data.zip",
+      "domain_fit": [
+        "building",
+        "environment"
+      ],
+      "row_estimate": 43824,
+      "hardware_alignment": [
+        "airQuality",
+        "temperature",
+        "humidity",
+        "pressure"
+      ],
+      "status": "cataloged",
+      "download_mode": "open_ucimlrepo"
+    },
+    {
+      "id": "mendeley_bridge_vibration",
+      "name": "Bridge Vibration Monitoring Dataset",
+      "source": "Mendeley Data",
+      "url": "https://data.mendeley.com/datasets/d3by55pjh7/2",
+      "license": "CC BY 4.0",
+      "doi": "10.17632/d3by55pjh7.2",
+      "domain_fit": [
+        "bridge"
+      ],
+      "row_estimate": null,
+      "hardware_alignment": [
+        "vibration",
+        "traffic/load proxy",
+        "structural health monitoring"
+      ],
+      "status": "cataloged",
+      "download_mode": "manual_or_api"
+    },
+    {
+      "id": "kaggle_water_leak_dataset",
+      "name": "Water Leak Dataset",
+      "source": "Kaggle",
+      "url": "https://www.kaggle.com/datasets/ziya07/water-leak-dataset",
+      "license": "check Kaggle dataset page before use",
+      "kaggle_slug": "ziya07/water-leak-dataset",
+      "domain_fit": [
+        "water"
+      ],
+      "row_estimate": null,
+      "hardware_alignment": [
+        "leakStatus",
+        "leakProbability",
+        "soil moisture/leak proxy",
+        "tank level proxy"
+      ],
+      "status": "requires_kaggle_credentials",
+      "download_mode": "kaggle_api"
+    },
+    {
+      "id": "kaggle_aging_bridge_shm",
+      "name": "Aging Bridge SHM Time-Series Dataset",
+      "source": "Kaggle",
+      "url": "https://www.kaggle.com/datasets/programmer3/aging-bridge-shm-time-series-dataset",
+      "license": "check Kaggle dataset page before use",
+      "kaggle_slug": "programmer3/aging-bridge-shm-time-series-dataset",
+      "domain_fit": [
+        "bridge"
+      ],
+      "row_estimate": 1340,
+      "hardware_alignment": [
+        "danger switches proxy",
+        "bridge vibration/load proxy",
+        "roadStatus/danger labels"
+      ],
+      "status": "requires_kaggle_credentials",
+      "download_mode": "kaggle_api"
+    }
+  ],
+  "acquisition_results": [
+    {
+      "id": "uci_beijing_multisite_air_quality",
+      "status": "downloaded_direct_archive",
+      "path": "data/external/uci_beijing_multisite_air_quality/source.zip",
+      "metadata": "data/external/uci_beijing_multisite_air_quality/metadata.json",
+      "rows": 421774,
+      "files": 16,
+      "import_fallback_reason": "\"Beijing Multi-Site Air Quality\" dataset (id=501) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true"
+    },
+    {
+      "id": "uci_air_quality_gas_multisensor",
+      "status": "downloaded",
+      "path": "data/external/uci_air_quality_gas_multisensor/data.csv",
+      "metadata": "data/external/uci_air_quality_gas_multisensor/metadata.json",
+      "rows": 9357,
+      "columns": 15
+    },
+    {
+      "id": "uci_beijing_pm25",
+      "status": "downloaded",
+      "path": "data/external/uci_beijing_pm25/data.csv",
+      "metadata": "data/external/uci_beijing_pm25/metadata.json",
+      "rows": 43824,
+      "columns": 12
+    },
+    {
+      "id": "mendeley_bridge_vibration",
+      "status": "cataloged",
+      "reason": "download not requested for this source"
+    },
+    {
+      "id": "kaggle_water_leak_dataset",
+      "status": "skipped",
+      "reason": "Kaggle credentials are not configured."
+    },
+    {
+      "id": "kaggle_aging_bridge_shm",
+      "status": "skipped",
+      "reason": "Kaggle credentials are not configured."
+    }
+  ],
+  "external_files": [
+    {
+      "path": "data/external/dataset_catalog.json",
+      "size_bytes": 8357,
+      "sha256": "5b140245796790d9dd0c625460cb09954a895d837048234c0fe0bcf2dcb2a7ff"
+    },
+    {
+      "path": "data/external/uci_air_quality_gas_multisensor/data.csv",
+      "size_bytes": 756065,
+      "sha256": "d8196847f231fc141ba16c1376aeb90d747a95353203e20ca3b4ae135438157d"
+    },
+    {
+      "path": "data/external/uci_air_quality_gas_multisensor/metadata.json",
+      "size_bytes": 453,
+      "sha256": "35546488b1930d90c0326b8e9eb38f2cbed51f745ce01f04f263409c727b61cf"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/2A2478DC-8517-4490-9FA7-36F9A7A542BE.JPG",
+      "size_bytes": 158758,
+      "sha256": "b18003e2f3612d683daea2c623e65327e7a2fab63f0ff23f7b3cbda1a704290a"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/data.csv",
+      "size_bytes": 37769,
+      "sha256": "cfd747b9f7308e6e5ec84944f963bbb2ca39a90e1d235c0f1e2c565afed88b3d"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Aotizhongxin_20130301-20170228.csv",
+      "size_bytes": 2835916,
+      "sha256": "a94fbcfc71708b6ffdc033360163d91efb7f675e496f6b5860929aa96b96351b"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Changping_20130301-20170228.csv",
+      "size_bytes": 2722295,
+      "sha256": "a2e21402a6d95fb7043f87959e6e3dcbecb957aac356a6f8028a85b047c772e7"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Dingling_20130301-20170228.csv",
+      "size_bytes": 2675856,
+      "sha256": "3d8dff81f18a80d9f455876a785642bffe1e9b9924ec1e6b7ce8cca790432eeb"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Dongsi_20130301-20170228.csv",
+      "size_bytes": 2636684,
+      "sha256": "9c0020214425e5ee2a64d42f97a1f632e1d8f6b53ad50edd85a686cc7999f27e"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Guanyuan_20130301-20170228.csv",
+      "size_bytes": 2695860,
+      "sha256": "59390fee3b032597b387491f5230e7edb90a8558e30217ebd6d9befbe669fbf9"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Gucheng_20130301-20170228.csv",
+      "size_bytes": 2654625,
+      "sha256": "10ae48801ea55869fee56a48b885fb1127859c130551888d71673f34216ba951"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Huairou_20130301-20170228.csv",
+      "size_bytes": 2641027,
+      "sha256": "812dcbe848b3ba2c2d25731064797bff803c46eb0c602156a1fa044df136dc26"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Nongzhanguan_20130301-20170228.csv",
+      "size_bytes": 2839705,
+      "sha256": "572cf87b65ef543cd55d3a711b28474def224a46b0ec3fc8add8aaf13b67a487"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Shunyi_20130301-20170228.csv",
+      "size_bytes": 2620654,
+      "sha256": "520b59e4ead3b0cfe7f1ed673e30275de8441e999db6f413d5172d2277b8c15a"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Tiantan_20130301-20170228.csv",
+      "size_bytes": 2655061,
+      "sha256": "0743e34799cf1ee36195b73321b91baa5625276532e7263c588f68cdef3b4daa"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Wanliu_20130301-20170228.csv",
+      "size_bytes": 2659544,
+      "sha256": "0b1a6d754a07f0def2f55434ddfa3870dcd0063b7f766a6f66b6c11bb05a377a"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Wanshouxigong_20130301-20170228.csv",
+      "size_bytes": 2871076,
+      "sha256": "ab1d6a356d6997a45f6d657ad47de1e05a4a08d4a7015b38a329a90665ab74d0"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228.zip",
+      "size_bytes": 7959991,
+      "sha256": "d1b9261c54132f04c374f762f1e5e512af19f95c95fd6bfa1e8ac7e927e3b0b8"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/extracted/test.csv",
+      "size_bytes": 35186,
+      "sha256": "0a1478eb69615e3673601dfd028251898faae73c73f0cbb0b7653b26c8b74b9e"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/metadata.json",
+      "size_bytes": 3087,
+      "sha256": "08eb793dbb953562651848dbbcefdcb7b50ae54652a90bc30518a7d1882a2e1d"
+    },
+    {
+      "path": "data/external/uci_beijing_multisite_air_quality/source.zip",
+      "size_bytes": 8192212,
+      "sha256": "b04da438b2f331ac0ffd45aebdfec0d20d2367feb5f6948c4b1f7ce1191e33c4"
+    },
+    {
+      "path": "data/external/uci_beijing_pm25/data.csv",
+      "size_bytes": 2013605,
+      "sha256": "60503e77ab334dfa7f19e15893127eddea3e8387153c97eaa5c6dbd7c2574b6a"
+    },
+    {
+      "path": "data/external/uci_beijing_pm25/metadata.json",
+      "size_bytes": 359,
+      "sha256": "03903f6fe51e5c11f19962ea0ba8b60ec4d84cae820f30da184869ab09a2e3ca"
+    }
+  ],
+  "next_steps": [
+    "Run with --download-open after installing ucimlrepo to fetch UCI datasets.",
+    "Configure Kaggle credentials and run the listed Kaggle commands for authenticated datasets.",
+    "Run scripts/data_pipeline/02_clean_and_engineer.py after placing external CSV files."
+  ],
+  "report": "reports/mlops/dataset_acquisition_report.md"
+}

@@ -1,0 +1,2011 @@
+{
+  "generatedAt": "2026-06-14T13:17:40.625948Z",
+  "dataset": {
+    "rowsAvailable": 620000,
+    "rowsUsedForTraining": 150000,
+    "realRows": 620000,
+    "syntheticRows": 0,
+    "realRatio": 1.0,
+    "sourceTypes": {
+      "real_enriched": 520000,
+      "project_telemetry_enriched": 100000
+    },
+    "sourceDatasets": {
+      "LoED: The LoRaWAN at the Edge Dataset": 520000,
+      "Existing SmartCity project telemetry": 100000
+    }
+  },
+  "featureColumns": [
+    "rssi_dbm",
+    "snr_db",
+    "spreading_factor",
+    "bandwidth_khz",
+    "coding_rate_value",
+    "tx_power_dbm",
+    "frequency_mhz",
+    "crc_ok",
+    "packet_received",
+    "distance_m",
+    "environment_code",
+    "obstacle_level",
+    "battery_voltage",
+    "battery_pct",
+    "current_ma",
+    "delivery_ratio",
+    "packet_loss_rate"
+  ],
+  "tasks": {
+    "packet_loss": {
+      "title": "Packet Loss Predictor",
+      "target": "label_packet_loss",
+      "type": "binary",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "labelMapping": {
+        "0": 0,
+        "1": 1
+      },
+      "bestModel": {
+        "model": "XGBoost",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.99997,
+          "precision_macro": 0.999977,
+          "recall_macro": 0.999956,
+          "f1_macro": 0.999966,
+          "confusion_matrix": [
+            [
+              21691,
+              0
+            ],
+            [
+              1,
+              11308
+            ]
+          ],
+          "labels": [
+            "0",
+            "1"
+          ],
+          "roc_auc": 1.0
+        },
+        "runtimeSeconds": 2.003,
+        "modelSizeEstimateBytes": 84700,
+        "isTreeModel": true
+      },
+      "tfliteModel": {
+        "model": "Neural Network/TFLite",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.993758,
+          "precision_macro": 0.994385,
+          "recall_macro": 0.99176,
+          "f1_macro": 0.993054,
+          "confusion_matrix": [
+            [
+              21650,
+              41
+            ],
+            [
+              165,
+              11144
+            ]
+          ],
+          "labels": [
+            "0",
+            "1"
+          ],
+          "roc_auc": 0.999714
+        },
+        "runtimeSeconds": 3.055,
+        "kerasPath": "models/lpwan/lpwan_packet_loss.keras",
+        "tflitePath": "assets/ml_models/lpwan_packet_loss.tflite",
+        "tfliteSizeBytes": 8152,
+        "isTreeModel": false
+      },
+      "benchmarks": [
+        {
+          "model": "Random Forest",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999939,
+            "precision_macro": 0.999954,
+            "recall_macro": 0.999912,
+            "f1_macro": 0.999933,
+            "confusion_matrix": [
+              [
+                21691,
+                0
+              ],
+              [
+                2,
+                11307
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 1.0
+          },
+          "runtimeSeconds": 0.975,
+          "modelSizeEstimateBytes": 2974285,
+          "isTreeModel": true
+        },
+        {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999939,
+            "precision_macro": 0.999954,
+            "recall_macro": 0.999912,
+            "f1_macro": 0.999933,
+            "confusion_matrix": [
+              [
+                21691,
+                0
+              ],
+              [
+                2,
+                11307
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 1.0
+          },
+          "runtimeSeconds": 1.784,
+          "modelSizeEstimateBytes": 370333,
+          "isTreeModel": true
+        },
+        {
+          "model": "Extra Trees",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.991424,
+            "precision_macro": 0.990533,
+            "recall_macro": 0.990429,
+            "f1_macro": 0.990481,
+            "confusion_matrix": [
+              [
+                21552,
+                139
+              ],
+              [
+                144,
+                11165
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999655
+          },
+          "runtimeSeconds": 0.837,
+          "modelSizeEstimateBytes": 23080997,
+          "isTreeModel": true
+        },
+        {
+          "model": "XGBoost",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.99997,
+            "precision_macro": 0.999977,
+            "recall_macro": 0.999956,
+            "f1_macro": 0.999966,
+            "confusion_matrix": [
+              [
+                21691,
+                0
+              ],
+              [
+                1,
+                11308
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 1.0
+          },
+          "runtimeSeconds": 2.003,
+          "modelSizeEstimateBytes": 84700,
+          "isTreeModel": true
+        },
+        {
+          "model": "LightGBM",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999909,
+            "precision_macro": 0.999931,
+            "recall_macro": 0.999867,
+            "f1_macro": 0.999899,
+            "confusion_matrix": [
+              [
+                21691,
+                0
+              ],
+              [
+                3,
+                11306
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999997
+          },
+          "runtimeSeconds": 0.431,
+          "modelSizeEstimateBytes": 320133,
+          "isTreeModel": true
+        },
+        {
+          "model": "CatBoost",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.99997,
+            "precision_macro": 0.999977,
+            "recall_macro": 0.999956,
+            "f1_macro": 0.999966,
+            "confusion_matrix": [
+              [
+                21691,
+                0
+              ],
+              [
+                1,
+                11308
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 1.0
+          },
+          "runtimeSeconds": 1.039,
+          "modelSizeEstimateBytes": 55212,
+          "isTreeModel": true
+        },
+        {
+          "model": "Neural Network/TFLite",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.993758,
+            "precision_macro": 0.994385,
+            "recall_macro": 0.99176,
+            "f1_macro": 0.993054,
+            "confusion_matrix": [
+              [
+                21650,
+                41
+              ],
+              [
+                165,
+                11144
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999714
+          },
+          "runtimeSeconds": 3.055,
+          "kerasPath": "models/lpwan/lpwan_packet_loss.keras",
+          "tflitePath": "assets/ml_models/lpwan_packet_loss.tflite",
+          "tfliteSizeBytes": 8152,
+          "isTreeModel": false
+        }
+      ],
+      "confusionMatrixPlot": "reports/lpwan/packet_loss_confusion_matrix.png",
+      "curves": {
+        "rocCurve": "reports/lpwan/packet_loss_roc_curve.png",
+        "precisionRecallCurve": "reports/lpwan/packet_loss_precision_recall_curve.png"
+      },
+      "shap": {
+        "status": "computed",
+        "topFeatures": [
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 3.117013
+          },
+          {
+            "feature": "packet_loss_rate",
+            "meanAbsShap": 1.118215
+          },
+          {
+            "feature": "crc_ok",
+            "meanAbsShap": 0.826189
+          },
+          {
+            "feature": "delivery_ratio",
+            "meanAbsShap": 0.471076
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 0.455055
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.322685
+          },
+          {
+            "feature": "packet_received",
+            "meanAbsShap": 0.14549
+          },
+          {
+            "feature": "spreading_factor",
+            "meanAbsShap": 0.032575
+          },
+          {
+            "feature": "battery_pct",
+            "meanAbsShap": 0.01069
+          },
+          {
+            "feature": "battery_voltage",
+            "meanAbsShap": 0.006444
+          },
+          {
+            "feature": "obstacle_level",
+            "meanAbsShap": 0.00441
+          },
+          {
+            "feature": "current_ma",
+            "meanAbsShap": 0.000873
+          }
+        ]
+      }
+    },
+    "link_quality": {
+      "title": "Link Quality Classifier",
+      "target": "label_link_quality",
+      "type": "multiclass",
+      "labels": [
+        "excellent",
+        "fair",
+        "good",
+        "poor"
+      ],
+      "labelMapping": {
+        "excellent": 0,
+        "fair": 1,
+        "good": 2,
+        "poor": 3
+      },
+      "bestModel": {
+        "model": "XGBoost",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 1.0,
+          "precision_macro": 1.0,
+          "recall_macro": 1.0,
+          "f1_macro": 1.0,
+          "confusion_matrix": [
+            [
+              4086,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              12739,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4196,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              11979
+            ]
+          ],
+          "labels": [
+            "excellent",
+            "fair",
+            "good",
+            "poor"
+          ],
+          "roc_auc_ovr_macro": 1.0
+        },
+        "runtimeSeconds": 1.991,
+        "modelSizeEstimateBytes": 312606,
+        "isTreeModel": true
+      },
+      "tfliteModel": {
+        "model": "Neural Network/TFLite",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.967879,
+          "precision_macro": 0.960639,
+          "recall_macro": 0.958434,
+          "f1_macro": 0.959448,
+          "confusion_matrix": [
+            [
+              3953,
+              0,
+              133,
+              0
+            ],
+            [
+              0,
+              12483,
+              122,
+              134
+            ],
+            [
+              194,
+              178,
+              3824,
+              0
+            ],
+            [
+              0,
+              299,
+              0,
+              11680
+            ]
+          ],
+          "labels": [
+            "excellent",
+            "fair",
+            "good",
+            "poor"
+          ],
+          "roc_auc_ovr_macro": 0.998129
+        },
+        "runtimeSeconds": 3.015,
+        "kerasPath": "models/lpwan/lpwan_link_quality.keras",
+        "tflitePath": "assets/ml_models/lpwan_link_quality.tflite",
+        "tfliteSizeBytes": 8528,
+        "isTreeModel": false
+      },
+      "benchmarks": [
+        {
+          "model": "Random Forest",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999909,
+            "precision_macro": 0.99982,
+            "recall_macro": 0.999818,
+            "f1_macro": 0.999819,
+            "confusion_matrix": [
+              [
+                4084,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                12739,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                4195,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                11979
+              ]
+            ],
+            "labels": [
+              "excellent",
+              "fair",
+              "good",
+              "poor"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 1.018,
+          "modelSizeEstimateBytes": 10909177,
+          "isTreeModel": true
+        },
+        {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.998576,
+            "precision_macro": 0.997562,
+            "recall_macro": 0.998059,
+            "f1_macro": 0.997809,
+            "confusion_matrix": [
+              [
+                4074,
+                0,
+                12,
+                0
+              ],
+              [
+                0,
+                12717,
+                22,
+                0
+              ],
+              [
+                4,
+                9,
+                4183,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                11979
+              ]
+            ],
+            "labels": [
+              "excellent",
+              "fair",
+              "good",
+              "poor"
+            ],
+            "roc_auc_ovr_macro": 0.999993
+          },
+          "runtimeSeconds": 1.321,
+          "modelSizeEstimateBytes": 979274,
+          "isTreeModel": true
+        },
+        {
+          "model": "Extra Trees",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.968091,
+            "precision_macro": 0.960901,
+            "recall_macro": 0.963276,
+            "f1_macro": 0.961814,
+            "confusion_matrix": [
+              [
+                4034,
+                0,
+                52,
+                0
+              ],
+              [
+                0,
+                12298,
+                125,
+                316
+              ],
+              [
+                274,
+                67,
+                3855,
+                0
+              ],
+              [
+                0,
+                219,
+                0,
+                11760
+              ]
+            ],
+            "labels": [
+              "excellent",
+              "fair",
+              "good",
+              "poor"
+            ],
+            "roc_auc_ovr_macro": 0.998714
+          },
+          "runtimeSeconds": 1.24,
+          "modelSizeEstimateBytes": 72580583,
+          "isTreeModel": true
+        },
+        {
+          "model": "XGBoost",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision_macro": 1.0,
+            "recall_macro": 1.0,
+            "f1_macro": 1.0,
+            "confusion_matrix": [
+              [
+                4086,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                12739,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                4196,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                11979
+              ]
+            ],
+            "labels": [
+              "excellent",
+              "fair",
+              "good",
+              "poor"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 1.991,
+          "modelSizeEstimateBytes": 312606,
+          "isTreeModel": true
+        },
+        {
+          "model": "LightGBM",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.99997,
+            "precision_macro": 0.999939,
+            "recall_macro": 0.99994,
+            "f1_macro": 0.99994,
+            "confusion_matrix": [
+              [
+                4086,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                12739,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                4195,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                11979
+              ]
+            ],
+            "labels": [
+              "excellent",
+              "fair",
+              "good",
+              "poor"
+            ],
+            "roc_auc_ovr_macro": 0.999941
+          },
+          "runtimeSeconds": 1.474,
+          "modelSizeEstimateBytes": 1280703,
+          "isTreeModel": true
+        },
+        {
+          "model": "CatBoost",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.99997,
+            "precision_macro": 0.999939,
+            "recall_macro": 0.99994,
+            "f1_macro": 0.99994,
+            "confusion_matrix": [
+              [
+                4086,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                12739,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                4195,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                11979
+              ]
+            ],
+            "labels": [
+              "excellent",
+              "fair",
+              "good",
+              "poor"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 2.643,
+          "modelSizeEstimateBytes": 116752,
+          "isTreeModel": true
+        },
+        {
+          "model": "Neural Network/TFLite",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.967879,
+            "precision_macro": 0.960639,
+            "recall_macro": 0.958434,
+            "f1_macro": 0.959448,
+            "confusion_matrix": [
+              [
+                3953,
+                0,
+                133,
+                0
+              ],
+              [
+                0,
+                12483,
+                122,
+                134
+              ],
+              [
+                194,
+                178,
+                3824,
+                0
+              ],
+              [
+                0,
+                299,
+                0,
+                11680
+              ]
+            ],
+            "labels": [
+              "excellent",
+              "fair",
+              "good",
+              "poor"
+            ],
+            "roc_auc_ovr_macro": 0.998129
+          },
+          "runtimeSeconds": 3.015,
+          "kerasPath": "models/lpwan/lpwan_link_quality.keras",
+          "tflitePath": "assets/ml_models/lpwan_link_quality.tflite",
+          "tfliteSizeBytes": 8528,
+          "isTreeModel": false
+        }
+      ],
+      "confusionMatrixPlot": "reports/lpwan/link_quality_confusion_matrix.png",
+      "curves": {
+        "rocCurve": "reports/lpwan/link_quality_roc_curve.png",
+        "precisionRecallCurve": "reports/lpwan/link_quality_precision_recall_curve.png"
+      },
+      "shap": {
+        "status": "computed",
+        "topFeatures": [
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 2.266004
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 0.878068
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.135893
+          },
+          {
+            "feature": "crc_ok",
+            "meanAbsShap": 0.052204
+          },
+          {
+            "feature": "packet_received",
+            "meanAbsShap": 0.016989
+          },
+          {
+            "feature": "environment_code",
+            "meanAbsShap": 0.007219
+          },
+          {
+            "feature": "spreading_factor",
+            "meanAbsShap": 0.006908
+          },
+          {
+            "feature": "current_ma",
+            "meanAbsShap": 0.002622
+          },
+          {
+            "feature": "tx_power_dbm",
+            "meanAbsShap": 0.001825
+          },
+          {
+            "feature": "frequency_mhz",
+            "meanAbsShap": 0.000808
+          },
+          {
+            "feature": "delivery_ratio",
+            "meanAbsShap": 0.000753
+          },
+          {
+            "feature": "packet_loss_rate",
+            "meanAbsShap": 8.4e-05
+          }
+        ]
+      }
+    },
+    "gateway_health": {
+      "title": "Gateway Health Classifier",
+      "target": "label_gateway_health",
+      "type": "multiclass",
+      "labels": [
+        "critical",
+        "degraded",
+        "healthy"
+      ],
+      "labelMapping": {
+        "critical": 0,
+        "degraded": 1,
+        "healthy": 2
+      },
+      "bestModel": {
+        "model": "Random Forest",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 1.0,
+          "precision_macro": 1.0,
+          "recall_macro": 1.0,
+          "f1_macro": 1.0,
+          "confusion_matrix": [
+            [
+              21036,
+              0,
+              0
+            ],
+            [
+              0,
+              6603,
+              0
+            ],
+            [
+              0,
+              0,
+              5361
+            ]
+          ],
+          "labels": [
+            "critical",
+            "degraded",
+            "healthy"
+          ],
+          "roc_auc_ovr_macro": 1.0
+        },
+        "runtimeSeconds": 1.044,
+        "modelSizeEstimateBytes": 2173255,
+        "isTreeModel": true
+      },
+      "tfliteModel": {
+        "model": "Neural Network/TFLite",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 1.0,
+          "precision_macro": 1.0,
+          "recall_macro": 1.0,
+          "f1_macro": 1.0,
+          "confusion_matrix": [
+            [
+              21036,
+              0,
+              0
+            ],
+            [
+              0,
+              6603,
+              0
+            ],
+            [
+              0,
+              0,
+              5361
+            ]
+          ],
+          "labels": [
+            "critical",
+            "degraded",
+            "healthy"
+          ],
+          "roc_auc_ovr_macro": 1.0
+        },
+        "runtimeSeconds": 3.308,
+        "kerasPath": "models/lpwan/lpwan_gateway_health.keras",
+        "tflitePath": "assets/ml_models/lpwan_gateway_health.tflite",
+        "tfliteSizeBytes": 8432,
+        "isTreeModel": false
+      },
+      "benchmarks": [
+        {
+          "model": "Random Forest",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision_macro": 1.0,
+            "recall_macro": 1.0,
+            "f1_macro": 1.0,
+            "confusion_matrix": [
+              [
+                21036,
+                0,
+                0
+              ],
+              [
+                0,
+                6603,
+                0
+              ],
+              [
+                0,
+                0,
+                5361
+              ]
+            ],
+            "labels": [
+              "critical",
+              "degraded",
+              "healthy"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 1.044,
+          "modelSizeEstimateBytes": 2173255,
+          "isTreeModel": true
+        },
+        {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision_macro": 1.0,
+            "recall_macro": 1.0,
+            "f1_macro": 1.0,
+            "confusion_matrix": [
+              [
+                21036,
+                0,
+                0
+              ],
+              [
+                0,
+                6603,
+                0
+              ],
+              [
+                0,
+                0,
+                5361
+              ]
+            ],
+            "labels": [
+              "critical",
+              "degraded",
+              "healthy"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 1.424,
+          "modelSizeEstimateBytes": 853248,
+          "isTreeModel": true
+        },
+        {
+          "model": "Extra Trees",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision_macro": 1.0,
+            "recall_macro": 1.0,
+            "f1_macro": 1.0,
+            "confusion_matrix": [
+              [
+                21036,
+                0,
+                0
+              ],
+              [
+                0,
+                6603,
+                0
+              ],
+              [
+                0,
+                0,
+                5361
+              ]
+            ],
+            "labels": [
+              "critical",
+              "degraded",
+              "healthy"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 0.798,
+          "modelSizeEstimateBytes": 5269688,
+          "isTreeModel": true
+        },
+        {
+          "model": "Neural Network/TFLite",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 1.0,
+            "precision_macro": 1.0,
+            "recall_macro": 1.0,
+            "f1_macro": 1.0,
+            "confusion_matrix": [
+              [
+                21036,
+                0,
+                0
+              ],
+              [
+                0,
+                6603,
+                0
+              ],
+              [
+                0,
+                0,
+                5361
+              ]
+            ],
+            "labels": [
+              "critical",
+              "degraded",
+              "healthy"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 3.308,
+          "kerasPath": "models/lpwan/lpwan_gateway_health.keras",
+          "tflitePath": "assets/ml_models/lpwan_gateway_health.tflite",
+          "tfliteSizeBytes": 8432,
+          "isTreeModel": false
+        }
+      ],
+      "confusionMatrixPlot": "reports/lpwan/gateway_health_confusion_matrix.png",
+      "curves": {
+        "rocCurve": "reports/lpwan/gateway_health_roc_curve.png",
+        "precisionRecallCurve": "reports/lpwan/gateway_health_precision_recall_curve.png"
+      },
+      "shap": {
+        "status": "computed",
+        "topFeatures": [
+          {
+            "feature": "obstacle_level",
+            "meanAbsShap": 0.138968
+          },
+          {
+            "feature": "delivery_ratio",
+            "meanAbsShap": 0.092923
+          },
+          {
+            "feature": "environment_code",
+            "meanAbsShap": 0.084707
+          },
+          {
+            "feature": "packet_loss_rate",
+            "meanAbsShap": 0.081532
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.039512
+          },
+          {
+            "feature": "crc_ok",
+            "meanAbsShap": 0.009879
+          },
+          {
+            "feature": "packet_received",
+            "meanAbsShap": 0.009877
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 0.008686
+          },
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 0.006214
+          },
+          {
+            "feature": "battery_voltage",
+            "meanAbsShap": 0.004702
+          },
+          {
+            "feature": "battery_pct",
+            "meanAbsShap": 0.004264
+          },
+          {
+            "feature": "spreading_factor",
+            "meanAbsShap": 0.003675
+          }
+        ]
+      }
+    },
+    "energy_risk": {
+      "title": "Energy Risk Predictor",
+      "target": "label_energy_risk",
+      "type": "binary",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "labelMapping": {
+        "0": 0,
+        "1": 1
+      },
+      "bestModel": {
+        "model": "Random Forest",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.99997,
+          "precision_macro": 0.999768,
+          "recall_macro": 0.999984,
+          "f1_macro": 0.999876,
+          "confusion_matrix": [
+            [
+              30841,
+              1
+            ],
+            [
+              0,
+              2158
+            ]
+          ],
+          "labels": [
+            "0",
+            "1"
+          ],
+          "roc_auc": 1.0
+        },
+        "runtimeSeconds": 0.845,
+        "modelSizeEstimateBytes": 1983895,
+        "isTreeModel": true
+      },
+      "tfliteModel": {
+        "model": "Neural Network/TFLite",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.993545,
+          "precision_macro": 0.986669,
+          "recall_macro": 0.959915,
+          "f1_macro": 0.972853,
+          "confusion_matrix": [
+            [
+              30799,
+              43
+            ],
+            [
+              170,
+              1988
+            ]
+          ],
+          "labels": [
+            "0",
+            "1"
+          ],
+          "roc_auc": 0.999464
+        },
+        "runtimeSeconds": 3.129,
+        "kerasPath": "models/lpwan/lpwan_energy_risk.keras",
+        "tflitePath": "assets/ml_models/lpwan_energy_risk.tflite",
+        "tfliteSizeBytes": 8200,
+        "isTreeModel": false
+      },
+      "benchmarks": [
+        {
+          "model": "Random Forest",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.99997,
+            "precision_macro": 0.999768,
+            "recall_macro": 0.999984,
+            "f1_macro": 0.999876,
+            "confusion_matrix": [
+              [
+                30841,
+                1
+              ],
+              [
+                0,
+                2158
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 1.0
+          },
+          "runtimeSeconds": 0.845,
+          "modelSizeEstimateBytes": 1983895,
+          "isTreeModel": true
+        },
+        {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999848,
+            "precision_macro": 0.998844,
+            "recall_macro": 0.999919,
+            "f1_macro": 0.999381,
+            "confusion_matrix": [
+              [
+                30837,
+                5
+              ],
+              [
+                0,
+                2158
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999995
+          },
+          "runtimeSeconds": 0.413,
+          "modelSizeEstimateBytes": 316667,
+          "isTreeModel": true
+        },
+        {
+          "model": "Extra Trees",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.986758,
+            "precision_macro": 0.916359,
+            "recall_macro": 0.991838,
+            "f1_macro": 0.950365,
+            "confusion_matrix": [
+              [
+                30410,
+                432
+              ],
+              [
+                5,
+                2153
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999827
+          },
+          "runtimeSeconds": 0.803,
+          "modelSizeEstimateBytes": 16489957,
+          "isTreeModel": true
+        },
+        {
+          "model": "XGBoost",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999697,
+            "precision_macro": 0.999838,
+            "recall_macro": 0.997683,
+            "f1_macro": 0.998758,
+            "confusion_matrix": [
+              [
+                30842,
+                0
+              ],
+              [
+                10,
+                2148
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999987
+          },
+          "runtimeSeconds": 0.541,
+          "modelSizeEstimateBytes": 101098,
+          "isTreeModel": true
+        },
+        {
+          "model": "LightGBM",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.997455,
+            "precision_macro": 0.984552,
+            "recall_macro": 0.994975,
+            "f1_macro": 0.989699,
+            "confusion_matrix": [
+              [
+                30775,
+                67
+              ],
+              [
+                17,
+                2141
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999965
+          },
+          "runtimeSeconds": 0.409,
+          "modelSizeEstimateBytes": 310570,
+          "isTreeModel": true
+        },
+        {
+          "model": "CatBoost",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999606,
+            "precision_macro": 0.999141,
+            "recall_macro": 0.997634,
+            "f1_macro": 0.998386,
+            "confusion_matrix": [
+              [
+                30839,
+                3
+              ],
+              [
+                10,
+                2148
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999991
+          },
+          "runtimeSeconds": 0.837,
+          "modelSizeEstimateBytes": 54452,
+          "isTreeModel": true
+        },
+        {
+          "model": "Neural Network/TFLite",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.993545,
+            "precision_macro": 0.986669,
+            "recall_macro": 0.959915,
+            "f1_macro": 0.972853,
+            "confusion_matrix": [
+              [
+                30799,
+                43
+              ],
+              [
+                170,
+                1988
+              ]
+            ],
+            "labels": [
+              "0",
+              "1"
+            ],
+            "roc_auc": 0.999464
+          },
+          "runtimeSeconds": 3.129,
+          "kerasPath": "models/lpwan/lpwan_energy_risk.keras",
+          "tflitePath": "assets/ml_models/lpwan_energy_risk.tflite",
+          "tfliteSizeBytes": 8200,
+          "isTreeModel": false
+        }
+      ],
+      "confusionMatrixPlot": "reports/lpwan/energy_risk_confusion_matrix.png",
+      "curves": {
+        "rocCurve": "reports/lpwan/energy_risk_roc_curve.png",
+        "precisionRecallCurve": "reports/lpwan/energy_risk_precision_recall_curve.png"
+      },
+      "shap": {
+        "status": "computed",
+        "topFeatures": [
+          {
+            "feature": "current_ma",
+            "meanAbsShap": 0.246325
+          },
+          {
+            "feature": "spreading_factor",
+            "meanAbsShap": 0.131671
+          },
+          {
+            "feature": "tx_power_dbm",
+            "meanAbsShap": 0.063541
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.017231
+          },
+          {
+            "feature": "environment_code",
+            "meanAbsShap": 0.014791
+          },
+          {
+            "feature": "battery_pct",
+            "meanAbsShap": 0.014113
+          },
+          {
+            "feature": "battery_voltage",
+            "meanAbsShap": 0.010015
+          },
+          {
+            "feature": "obstacle_level",
+            "meanAbsShap": 0.009722
+          },
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 0.007661
+          },
+          {
+            "feature": "packet_loss_rate",
+            "meanAbsShap": 0.007581
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 0.004389
+          },
+          {
+            "feature": "delivery_ratio",
+            "meanAbsShap": 0.001872
+          }
+        ]
+      }
+    },
+    "optimal_sf": {
+      "title": "Optimal Spreading Factor Classifier",
+      "target": "label_optimal_sf",
+      "type": "multiclass",
+      "labels": [
+        "10",
+        "11",
+        "12",
+        "7",
+        "8",
+        "9"
+      ],
+      "labelMapping": {
+        "10": 0,
+        "11": 1,
+        "12": 2,
+        "7": 3,
+        "8": 4,
+        "9": 5
+      },
+      "bestModel": {
+        "model": "Gradient Boosting",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.999939,
+          "precision_macro": 0.99991,
+          "recall_macro": 0.999934,
+          "f1_macro": 0.999922,
+          "confusion_matrix": [
+            [
+              5907,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              8727,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              9229,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4405,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1048,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              3682
+            ]
+          ],
+          "labels": [
+            "10",
+            "11",
+            "12",
+            "7",
+            "8",
+            "9"
+          ],
+          "roc_auc_ovr_macro": 1.0
+        },
+        "runtimeSeconds": 2.75,
+        "modelSizeEstimateBytes": 1765734,
+        "isTreeModel": true
+      },
+      "tfliteModel": {
+        "model": "Neural Network/TFLite",
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.957121,
+          "precision_macro": 0.960018,
+          "recall_macro": 0.942826,
+          "f1_macro": 0.950643,
+          "confusion_matrix": [
+            [
+              5530,
+              202,
+              0,
+              0,
+              1,
+              175
+            ],
+            [
+              225,
+              8323,
+              179,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              221,
+              9008,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              4406,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              906,
+              142
+            ],
+            [
+              266,
+              0,
+              0,
+              0,
+              4,
+              3412
+            ]
+          ],
+          "labels": [
+            "10",
+            "11",
+            "12",
+            "7",
+            "8",
+            "9"
+          ],
+          "roc_auc_ovr_macro": 0.997738
+        },
+        "runtimeSeconds": 3.319,
+        "kerasPath": "models/lpwan/lpwan_optimal_sf.keras",
+        "tflitePath": "assets/ml_models/lpwan_optimal_sf.tflite",
+        "tfliteSizeBytes": 8720,
+        "isTreeModel": false
+      },
+      "benchmarks": [
+        {
+          "model": "Random Forest",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999667,
+            "precision_macro": 0.99971,
+            "recall_macro": 0.999569,
+            "f1_macro": 0.999639,
+            "confusion_matrix": [
+              [
+                5907,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                8727,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                6,
+                9223,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                4406,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                1047,
+                1
+              ],
+              [
+                3,
+                0,
+                0,
+                0,
+                0,
+                3679
+              ]
+            ],
+            "labels": [
+              "10",
+              "11",
+              "12",
+              "7",
+              "8",
+              "9"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 1.201,
+          "modelSizeEstimateBytes": 18993239,
+          "isTreeModel": true
+        },
+        {
+          "model": "Gradient Boosting",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999939,
+            "precision_macro": 0.99991,
+            "recall_macro": 0.999934,
+            "f1_macro": 0.999922,
+            "confusion_matrix": [
+              [
+                5907,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                8727,
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                9229,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                4405,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                1048,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                0,
+                3682
+              ]
+            ],
+            "labels": [
+              "10",
+              "11",
+              "12",
+              "7",
+              "8",
+              "9"
+            ],
+            "roc_auc_ovr_macro": 1.0
+          },
+          "runtimeSeconds": 2.75,
+          "modelSizeEstimateBytes": 1765734,
+          "isTreeModel": true
+        },
+        {
+          "model": "Extra Trees",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.968515,
+            "precision_macro": 0.971816,
+            "recall_macro": 0.973563,
+            "f1_macro": 0.972548,
+            "confusion_matrix": [
+              [
+                5738,
+                88,
+                0,
+                0,
+                0,
+                82
+              ],
+              [
+                297,
+                8177,
+                253,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                159,
+                9070,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                4406,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                1039,
+                9
+              ],
+              [
+                132,
+                0,
+                0,
+                0,
+                19,
+                3531
+              ]
+            ],
+            "labels": [
+              "10",
+              "11",
+              "12",
+              "7",
+              "8",
+              "9"
+            ],
+            "roc_auc_ovr_macro": 0.998739
+          },
+          "runtimeSeconds": 1.299,
+          "modelSizeEstimateBytes": 93257847,
+          "isTreeModel": true
+        },
+        {
+          "model": "Neural Network/TFLite",
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.957121,
+            "precision_macro": 0.960018,
+            "recall_macro": 0.942826,
+            "f1_macro": 0.950643,
+            "confusion_matrix": [
+              [
+                5530,
+                202,
+                0,
+                0,
+                1,
+                175
+              ],
+              [
+                225,
+                8323,
+                179,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                221,
+                9008,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                4406,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0,
+                906,
+                142
+              ],
+              [
+                266,
+                0,
+                0,
+                0,
+                4,
+                3412
+              ]
+            ],
+            "labels": [
+              "10",
+              "11",
+              "12",
+              "7",
+              "8",
+              "9"
+            ],
+            "roc_auc_ovr_macro": 0.997738
+          },
+          "runtimeSeconds": 3.319,
+          "kerasPath": "models/lpwan/lpwan_optimal_sf.keras",
+          "tflitePath": "assets/ml_models/lpwan_optimal_sf.tflite",
+          "tfliteSizeBytes": 8720,
+          "isTreeModel": false
+        }
+      ],
+      "confusionMatrixPlot": "reports/lpwan/optimal_sf_confusion_matrix.png",
+      "curves": {
+        "rocCurve": "reports/lpwan/optimal_sf_roc_curve.png",
+        "precisionRecallCurve": "reports/lpwan/optimal_sf_precision_recall_curve.png"
+      },
+      "shap": {
+        "status": "computed",
+        "topFeatures": [
+          {
+            "feature": "snr_db",
+            "meanAbsShap": 5.456415
+          },
+          {
+            "feature": "rssi_dbm",
+            "meanAbsShap": 1.289143
+          },
+          {
+            "feature": "distance_m",
+            "meanAbsShap": 0.001629
+          },
+          {
+            "feature": "battery_pct",
+            "meanAbsShap": 0.001191
+          },
+          {
+            "feature": "spreading_factor",
+            "meanAbsShap": 0.001123
+          },
+          {
+            "feature": "environment_code",
+            "meanAbsShap": 0.000856
+          },
+          {
+            "feature": "delivery_ratio",
+            "meanAbsShap": 0.000516
+          },
+          {
+            "feature": "frequency_mhz",
+            "meanAbsShap": 0.000281
+          },
+          {
+            "feature": "current_ma",
+            "meanAbsShap": 0.000174
+          },
+          {
+            "feature": "obstacle_level",
+            "meanAbsShap": 8e-05
+          },
+          {
+            "feature": "battery_voltage",
+            "meanAbsShap": 2.1e-05
+          },
+          {
+            "feature": "packet_loss_rate",
+            "meanAbsShap": 1.4e-05
+          }
+        ]
+      }
+    }
+  },
+  "tfliteAssets": {
+    "packet_loss": "assets/ml_models/lpwan_packet_loss.tflite",
+    "link_quality": "assets/ml_models/lpwan_link_quality.tflite",
+    "gateway_health": "assets/ml_models/lpwan_gateway_health.tflite",
+    "energy_risk": "assets/ml_models/lpwan_energy_risk.tflite",
+    "optimal_sf": "assets/ml_models/lpwan_optimal_sf.tflite"
+  }
+}

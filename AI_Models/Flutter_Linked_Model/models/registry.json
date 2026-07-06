@@ -1,0 +1,257 @@
+{
+  "schema": "smartcity-model-registry-v1",
+  "created_at": "2026-06-14T06:17:52.865183Z",
+  "active_version": "v20260614-phase3-real-data",
+  "versions": [
+    {
+      "version": "v20260614-phase2",
+      "registered_at": "2026-06-14T06:17:52.945290Z",
+      "path": "models/v20260614-phase2",
+      "latest_path": "models/latest",
+      "notes": "Phase 2 baseline: production monitoring, drift, explainability, registry, and Flutter MLOps summary.",
+      "artifacts": [
+        {
+          "source": "models/model_metadata.json",
+          "path": "models/v20260614-phase2/model_metadata.json",
+          "size_bytes": 6103,
+          "status": "copied"
+        },
+        {
+          "source": "models/production_anomaly_model.keras",
+          "path": "models/v20260614-phase2/production_anomaly_model.keras",
+          "size_bytes": 64324,
+          "status": "copied"
+        },
+        {
+          "source": "models/alert_scorer.keras",
+          "path": "models/v20260614-phase2/alert_scorer.keras",
+          "size_bytes": 55311,
+          "status": "copied"
+        },
+        {
+          "source": "models/signal_predictor.pkl",
+          "path": "models/v20260614-phase2/signal_predictor.pkl",
+          "size_bytes": 26685288,
+          "status": "copied"
+        },
+        {
+          "source": "models/validation_sample.npz",
+          "path": "models/v20260614-phase2/validation_sample.npz",
+          "size_bytes": 68509,
+          "status": "copied"
+        },
+        {
+          "source": "assets/ml_models/production_model.tflite",
+          "path": "models/v20260614-phase2/production_model.tflite",
+          "size_bytes": 9668,
+          "status": "copied"
+        },
+        {
+          "source": "assets/ml_models/alert_scorer.tflite",
+          "path": "models/v20260614-phase2/alert_scorer.tflite",
+          "size_bytes": 8452,
+          "status": "copied"
+        },
+        {
+          "source": "assets/ml_models/model_config.json",
+          "path": "models/v20260614-phase2/model_config.json",
+          "size_bytes": 7735,
+          "status": "copied"
+        },
+        {
+          "source": "assets/ml_models/mlops_summary.json",
+          "path": "models/v20260614-phase2/mlops_summary.json",
+          "size_bytes": 11210,
+          "status": "copied"
+        }
+      ],
+      "metrics": {
+        "model_version": "2026.06.13-prod",
+        "dataset_size": 418243,
+        "threshold": 0.35,
+        "metrics": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion_matrix": [
+            [
+              59101,
+              0
+            ],
+            [
+              0,
+              3636
+            ]
+          ],
+          "auc_roc": 1.0
+        }
+      }
+    },
+    {
+      "version": "v20260614-phase3-real-data",
+      "registered_at": "2026-06-14T06:53:15.104120Z",
+      "path": "models/v20260614-phase3-real-data",
+      "latest_path": "models/latest",
+      "notes": "Phase 3 real-data training pass with weak-labeled UCI environmental data and capped synthetic domain coverage.",
+      "artifacts": [
+        {
+          "source": "models/model_metadata.json",
+          "path": "models/v20260614-phase3-real-data/model_metadata.json",
+          "size_bytes": 9690
+        },
+        {
+          "source": "models/production_anomaly_model.keras",
+          "path": "models/v20260614-phase3-real-data/production_anomaly_model.keras",
+          "size_bytes": 91603
+        },
+        {
+          "source": "models/alert_scorer.keras",
+          "path": "models/v20260614-phase3-real-data/alert_scorer.keras",
+          "size_bytes": 62347
+        },
+        {
+          "source": "models/validation_sample.npz",
+          "path": "models/v20260614-phase3-real-data/validation_sample.npz",
+          "size_bytes": 109847
+        },
+        {
+          "source": "model/production_model.tflite",
+          "path": "models/v20260614-phase3-real-data/production_model.tflite",
+          "size_bytes": 21380
+        },
+        {
+          "source": "model/alert_scorer.tflite",
+          "path": "models/v20260614-phase3-real-data/alert_scorer.tflite",
+          "size_bytes": 13680
+        },
+        {
+          "source": "assets/ml_models/production_model.tflite",
+          "path": "models/v20260614-phase3-real-data/production_model.tflite",
+          "size_bytes": 21380
+        },
+        {
+          "source": "assets/ml_models/alert_scorer.tflite",
+          "path": "models/v20260614-phase3-real-data/alert_scorer.tflite",
+          "size_bytes": 13680
+        },
+        {
+          "source": "assets/ml_models/model_config.json",
+          "path": "models/v20260614-phase3-real-data/model_config.json",
+          "size_bytes": 10652
+        },
+        {
+          "source": "assets/ml_models/mlops_summary.json",
+          "path": "models/v20260614-phase3-real-data/mlops_summary.json",
+          "size_bytes": 6402
+        }
+      ],
+      "metrics": {
+        "training_rows": 608949,
+        "real_rows": 473949,
+        "synthetic_rows": 135000,
+        "feature_count": 25,
+        "selected_model": {
+          "accuracy": 0.96523,
+          "precision": 0.948302,
+          "recall": 0.841764,
+          "f1": 0.891862,
+          "confusion_matrix": [
+            [
+              75070,
+              714
+            ],
+            [
+              2462,
+              13097
+            ]
+          ],
+          "roc_auc": 0.983882
+        },
+        "real_test_metrics": {
+          "accuracy": 0.95547,
+          "precision": 0.943414,
+          "recall": 0.828623,
+          "f1": 0.882301,
+          "confusion_matrix": [
+            [
+              56242,
+              714
+            ],
+            [
+              2462,
+              11904
+            ]
+          ],
+          "roc_auc": 0.976776
+        },
+        "drift_baseline": {
+          "overallStatus": "low",
+          "featuresDrifted": 0,
+          "highDriftFeatures": 0,
+          "mediumDriftFeatures": 0,
+          "topFeatureDrift": [
+            {
+              "feature": "temp_c",
+              "psi": 0.000187,
+              "referenceMean": 14.091952,
+              "liveMean": 14.040649,
+              "status": "low"
+            },
+            {
+              "feature": "smoke_level",
+              "psi": 0.000138,
+              "referenceMean": 81.475143,
+              "liveMean": 82.522949,
+              "status": "low"
+            },
+            {
+              "feature": "pressure_bar",
+              "psi": 0.000136,
+              "referenceMean": 1.17791,
+              "liveMean": 1.17827,
+              "status": "low"
+            },
+            {
+              "feature": "pipe_temp_c",
+              "psi": 0.000136,
+              "referenceMean": 1.895414,
+              "liveMean": 1.893442,
+              "status": "low"
+            },
+            {
+              "feature": "power_kwh",
+              "psi": 0.000119,
+              "referenceMean": 0.295702,
+              "liveMean": 0.294188,
+              "status": "low"
+            },
+            {
+              "feature": "crack_index",
+              "psi": 0.000118,
+              "referenceMean": 0.005359,
+              "liveMean": 0.005205,
+              "status": "low"
+            },
+            {
+              "feature": "load_weight_ton",
+              "psi": 0.000116,
+              "referenceMean": 1.05032,
+              "liveMean": 1.026419,
+              "status": "low"
+            },
+            {
+              "feature": "humidity_pct",
+              "psi": 0.000106,
+              "referenceMean": 48.015923,
+              "liveMean": 47.957008,
+              "status": "low"
+            }
+          ]
+        },
+        "active_model_path": "assets/ml_models/production_model.tflite"
+      }
+    }
+  ],
+  "updated_at": "2026-06-14T06:53:15.104120Z"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "baseline_only",
+  "activeVersion": "v20260614-phase2",
+  "candidateVersion": null,
+  "trafficSplit": {
+    "active": 100,
+    "candidate": 0
+  },
+  "decision": "Keep active model until a retrained candidate is registered.",
+  "activeMetrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "brier": 3.2e-05,
+    "confusionMatrix": [
+      [
+        59101,
+        0
+      ],
+      [
+        0,
+        3635
+      ]
+    ],
+    "ece": 0.001056,
+    "confidenceMean": 0.997888
+  }
+}

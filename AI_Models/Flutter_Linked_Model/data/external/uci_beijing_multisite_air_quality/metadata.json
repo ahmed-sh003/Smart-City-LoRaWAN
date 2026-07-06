@@ -1,0 +1,27 @@
+{
+  "id": "uci_beijing_multisite_air_quality",
+  "source_url": "https://archive.ics.uci.edu/dataset/501/beijing%2Bmulti%2Bsite%2Bair%2Bquality%2Bdata",
+  "direct_download_url": "https://archive.ics.uci.edu/static/public/501/beijing+multi+site+air+quality+data.zip",
+  "downloaded_at": "2026-06-14T06:21:31.503376Z",
+  "previous_import_error": "\"Beijing Multi-Site Air Quality\" dataset (id=501) exists in the repository, but is not available for import. Please select a dataset from this list: https://archive.ics.uci.edu/datasets?skip=0&take=10&sort=desc&orderBy=NumHits&search=&Python=true",
+  "archive": "data/external/uci_beijing_multisite_air_quality/source.zip",
+  "files": [
+    "data/external/uci_beijing_multisite_air_quality/extracted/2A2478DC-8517-4490-9FA7-36F9A7A542BE.JPG",
+    "data/external/uci_beijing_multisite_air_quality/extracted/data.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Aotizhongxin_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Changping_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Dingling_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Dongsi_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Guanyuan_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Gucheng_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Huairou_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Nongzhanguan_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Shunyi_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Tiantan_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Wanliu_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228/PRSA_Data_20130301-20170228/PRSA_Data_Wanshouxigong_20130301-20170228.csv",
+    "data/external/uci_beijing_multisite_air_quality/extracted/PRSA2017_Data_20130301-20170228.zip",
+    "data/external/uci_beijing_multisite_air_quality/extracted/test.csv"
+  ],
+  "csv_rows": 421774
+}

@@ -1,0 +1,238 @@
+{
+  "generatedAt": "2026-06-14T06:53:15.078043Z",
+  "modelVersion": "v20260614-phase3-real-data",
+  "status": "attention",
+  "monitoring": {
+    "backend": "keras+tflite_validated",
+    "backendError": null,
+    "inferenceCount": 91343,
+    "referenceRows": 426264,
+    "liveRows": 91343,
+    "averageScore": 0.226671,
+    "p95Score": 0.999999,
+    "threshold": 0.82,
+    "latencyMs": 0.000152,
+    "errorRate": 0,
+    "predictionDistribution": {
+      "normal": 75137,
+      "watch": 2395,
+      "anomaly": 13811
+    }
+  },
+  "drift": {
+    "overallStatus": "low",
+    "featuresDrifted": 0,
+    "highDriftFeatures": 0,
+    "mediumDriftFeatures": 0,
+    "topFeatureDrift": [
+      {
+        "feature": "temp_c",
+        "psi": 0.000187,
+        "referenceMean": 14.091952,
+        "liveMean": 14.040649,
+        "status": "low"
+      },
+      {
+        "feature": "smoke_level",
+        "psi": 0.000138,
+        "referenceMean": 81.475143,
+        "liveMean": 82.522949,
+        "status": "low"
+      },
+      {
+        "feature": "pressure_bar",
+        "psi": 0.000136,
+        "referenceMean": 1.17791,
+        "liveMean": 1.17827,
+        "status": "low"
+      },
+      {
+        "feature": "pipe_temp_c",
+        "psi": 0.000136,
+        "referenceMean": 1.895414,
+        "liveMean": 1.893442,
+        "status": "low"
+      },
+      {
+        "feature": "power_kwh",
+        "psi": 0.000119,
+        "referenceMean": 0.295702,
+        "liveMean": 0.294188,
+        "status": "low"
+      },
+      {
+        "feature": "crack_index",
+        "psi": 0.000118,
+        "referenceMean": 0.005359,
+        "liveMean": 0.005205,
+        "status": "low"
+      },
+      {
+        "feature": "load_weight_ton",
+        "psi": 0.000116,
+        "referenceMean": 1.05032,
+        "liveMean": 1.026419,
+        "status": "low"
+      },
+      {
+        "feature": "humidity_pct",
+        "psi": 0.000106,
+        "referenceMean": 48.015923,
+        "liveMean": 47.957008,
+        "status": "low"
+      }
+    ]
+  },
+  "metrics": {
+    "accuracy": 0.96523,
+    "precision": 0.948302,
+    "recall": 0.841764,
+    "f1": 0.891862,
+    "confusion_matrix": [
+      [
+        75070,
+        714
+      ],
+      [
+        2462,
+        13097
+      ]
+    ],
+    "roc_auc": 0.983882,
+    "brier": 0.039501,
+    "ece": 0.056335,
+    "confidenceMean": 0.863799
+  },
+  "explainability": {
+    "method": "Phase 3 real-data class-separation proxy",
+    "shapStatus": "not_run_by_default; feature drivers are calculated from held-out Phase 3 data",
+    "topFeatures": [
+      {
+        "feature": "co2_ppm",
+        "importance": 1.293072,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "smoke_level",
+        "importance": 0.950187,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "air_humidity_pct",
+        "importance": 0.651266,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "humidity_pct",
+        "importance": 0.574588,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "battery_pct",
+        "importance": 0.418169,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "snr_db",
+        "importance": 0.322093,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "water_level_m",
+        "importance": 0.251678,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "pipe_temp_c",
+        "importance": 0.226669,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "rssi_dbm",
+        "importance": 0.220108,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "flow_rate_lpm",
+        "importance": 0.200715,
+        "direction": "higher risk when reduced"
+      }
+    ],
+    "topContributingFactors": [
+      {
+        "feature": "co2_ppm",
+        "importance": 1.293072,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "smoke_level",
+        "importance": 0.950187,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "air_humidity_pct",
+        "importance": 0.651266,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "humidity_pct",
+        "importance": 0.574588,
+        "direction": "higher risk when elevated"
+      },
+      {
+        "feature": "battery_pct",
+        "importance": 0.418169,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "snr_db",
+        "importance": 0.322093,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "water_level_m",
+        "importance": 0.251678,
+        "direction": "higher risk when reduced"
+      },
+      {
+        "feature": "pipe_temp_c",
+        "importance": 0.226669,
+        "direction": "higher risk when reduced"
+      }
+    ]
+  },
+  "registry": {
+    "activeVersion": "v20260614-phase3-real-data",
+    "path": "models/registry.json",
+    "latestPath": "models/latest"
+  },
+  "abTesting": {
+    "status": "baseline_only",
+    "activeVersion": "v20260614-phase3-real-data",
+    "candidateVersion": "",
+    "trafficSplit": {
+      "active": 100,
+      "candidate": 0
+    },
+    "decision": "Phase 3 model is active after TFLite validation; collect field telemetry before introducing a candidate split."
+  },
+  "training": {
+    "phase": "Phase 3 Real Data Training Pass",
+    "trainingRows": 608949,
+    "realRows": 473949,
+    "syntheticRows": 135000,
+    "realRatio": 0.778307,
+    "featureCount": 25,
+    "datasetsUsed": {
+      "UCI Beijing Multi-Site Air Quality": 420768,
+      "Phase 1 synthetic telemetry": 135000,
+      "UCI Beijing PM2.5": 43824,
+      "UCI Air Quality Gas Multisensor": 9357
+    }
+  },
+  "recommendations": [
+    "Collect real bridge and water datasets or export more Firebase field telemetry to reduce synthetic dependence.",
+    "Treat real environmental labels as weak labels until incidents are field-confirmed.",
+    "Monitor false positives on gateway/environment telemetry before tightening thresholds."
+  ]
+}

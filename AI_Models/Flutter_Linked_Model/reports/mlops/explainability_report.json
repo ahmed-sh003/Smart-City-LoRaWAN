@@ -1,0 +1,107 @@
+{
+  "method": "drift-aware proxy feature contribution",
+  "shapStatus": "not_run_by_default; install shap and run offline for exact SHAP values",
+  "topFeatures": [
+    {
+      "feature": "air_humidity_pct",
+      "importance": 1.360488,
+      "direction": "higher risk when elevated"
+    },
+    {
+      "feature": "air_temp_c",
+      "importance": 1.354088,
+      "direction": "higher risk when elevated"
+    },
+    {
+      "feature": "soil_temp_c",
+      "importance": 1.344408,
+      "direction": "higher risk when elevated"
+    },
+    {
+      "feature": "ndvi_index",
+      "importance": 1.325751,
+      "direction": "higher risk when elevated"
+    },
+    {
+      "feature": "soil_moisture_pct",
+      "importance": 1.299253,
+      "direction": "higher risk when elevated"
+    },
+    {
+      "feature": "humidity_pct",
+      "importance": 0.765054,
+      "direction": "higher risk when reduced"
+    },
+    {
+      "feature": "temp_c",
+      "importance": 0.738494,
+      "direction": "higher risk when reduced"
+    },
+    {
+      "feature": "battery_pct",
+      "importance": 0.668703,
+      "direction": "higher risk when reduced"
+    },
+    {
+      "feature": "snr_db",
+      "importance": 0.650987,
+      "direction": "higher risk when reduced"
+    },
+    {
+      "feature": "pressure_bar",
+      "importance": 0.551263,
+      "direction": "higher risk when reduced"
+    }
+  ],
+  "topContributingFactors": [
+    {
+      "feature": "co2_ppm",
+      "value": 1091.02002,
+      "referenceMedian": 0.0,
+      "deviation": 1091020019.53125
+    },
+    {
+      "feature": "smoke_level",
+      "value": 746.320007,
+      "referenceMedian": 0.0,
+      "deviation": 746320007.324219
+    },
+    {
+      "feature": "power_kwh",
+      "value": 8.487,
+      "referenceMedian": 0.0,
+      "deviation": 8487000.465393
+    },
+    {
+      "feature": "occupancy_count",
+      "value": 8.0,
+      "referenceMedian": 0.0,
+      "deviation": 8000000.0
+    },
+    {
+      "feature": "temp_c",
+      "value": 32.618,
+      "referenceMedian": 0.0,
+      "deviation": 1.353781
+    },
+    {
+      "feature": "humidity_pct",
+      "value": 45.93,
+      "referenceMedian": 0.0,
+      "deviation": 0.996853
+    },
+    {
+      "feature": "rssi_dbm",
+      "value": -67.529999,
+      "referenceMedian": -72.629997,
+      "deviation": 0.803149
+    },
+    {
+      "feature": "snr_db",
+      "value": 9.39,
+      "referenceMedian": 8.35,
+      "deviation": 0.533333
+    }
+  ],
+  "operatorExplanation": "The explanation ranks features by how strongly they separate recent high-risk telemetry from normal telemetry, then shows which latest readings deviate most from the reference production baseline."
+}

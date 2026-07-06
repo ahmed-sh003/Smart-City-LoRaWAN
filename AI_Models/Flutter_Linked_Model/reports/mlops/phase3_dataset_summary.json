@@ -1,0 +1,26 @@
+{
+  "version": "v20260614-phase3-real-data",
+  "generated_at": "2026-06-14T06:44:17.443666Z",
+  "inventory_report": "reports/mlops/phase3_data_inventory.md",
+  "unified_real_dataset": "data/processed/phase3_unified_real_dataset.csv",
+  "training_dataset": "data/processed/phase3_training_dataset.csv",
+  "merge_report": "reports/mlops/phase3_merge_strategy.md",
+  "feature_alignment_report": "reports/mlops/phase3_feature_alignment.md",
+  "real_rows": 473949,
+  "synthetic_rows": 135000,
+  "training_rows": 608949,
+  "real_ratio": 0.778307,
+  "domains": {
+    "gateway": 464592,
+    "bridge": 50000,
+    "water": 50000,
+    "building": 44357
+  },
+  "source_datasets": {
+    "UCI Beijing Multi-Site Air Quality": 420768,
+    "Phase 1 synthetic telemetry": 135000,
+    "UCI Beijing PM2.5": 43824,
+    "UCI Air Quality Gas Multisensor": 9357
+  },
+  "anomaly_rows": 103727
+}

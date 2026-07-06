@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-06-14T13:10:43.536272Z",
+  "rows": 620000,
+  "realRows": 620000,
+  "syntheticRows": 0,
+  "realRatio": 1.0,
+  "sourceTypes": {
+    "real_enriched": 520000,
+    "project_telemetry_enriched": 100000
+  },
+  "sourceDatasets": {
+    "LoED: The LoRaWAN at the Edge Dataset": 520000,
+    "Existing SmartCity project telemetry": 100000
+  },
+  "outputs": {
+    "csv": "data/lpwan/processed/lpwan_training_dataset.csv",
+    "parquet": "data/lpwan/processed/lpwan_training_dataset.parquet"
+  },
+  "loed": {
+    "archive": "data/lpwan/raw/LoED_LoRaWAN_at_edge_dataset.zip",
+    "csvFilesAvailable": 188,
+    "csvFilesUsed": 9,
+    "rows": 520000
+  },
+  "zenodo": {
+    "record": "https://zenodo.org/api/records/4121430",
+    "doi": "10.5281/zenodo.4121430",
+    "title": "LoED: The LoRaWAN at the Edge Dataset",
+    "license": "cc-by-4.0"
+  },
+  "missingFieldsFilled": [
+    "tx_power_dbm",
+    "distance_m",
+    "environment_type",
+    "obstacle_level",
+    "battery_voltage",
+    "battery_pct",
+    "current_ma",
+    "delivery_ratio",
+    "packet_loss_rate",
+    "labels"
+  ],
+  "assumptions": [
+    "LoED provides real gateway packet reception metadata; battery, current draw, distance, obstacle level, and deployment environment are not packet columns and are deterministically enriched.",
+    "Observed LoED gateway rows are received gateway events. CRC failures are treated as packet reception failures for packet-loss labels.",
+    "Synthetic LPWAN rows are generated only when real/enriched rows do not reach the configured row target.",
+    "Optimal spreading factor labels are rule labels based on RSSI, SNR, inferred distance, and obstacle level."
+  ],
+  "labelRules": {
+    "label_link_quality": "excellent/good/fair/poor thresholds from RSSI and SNR.",
+    "label_packet_loss": "1 when rolling loss >= 18%, CRC failed, RSSI < -115 dBm, or SNR < -10 dB.",
+    "label_gateway_health": "healthy/degraded/critical from gateway-level delivery ratio, median RSSI, and median SNR.",
+    "label_energy_risk": "1 when battery < 20%, high current with SF>=11, or high TX power with high packet loss.",
+    "label_optimal_sf": "SF7-SF12 rule recommendation from link margin, distance, and obstacle level."
+  },
+  "notes": []
+}

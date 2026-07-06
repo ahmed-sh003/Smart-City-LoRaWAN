@@ -1,0 +1,107 @@
+{
+  "generated_at": "2026-06-14T06:53:14.171886Z",
+  "status": "passed",
+  "model_version": "v20260614-phase3-real-data",
+  "threshold": 0.82,
+  "sample_count": 4096,
+  "model_size_bytes": 21380,
+  "deviation": {
+    "max_abs": 9.5e-07,
+    "mean_abs": 2e-08,
+    "p95_abs": 9e-08,
+    "accepted_max_abs": 0.01,
+    "stored_vs_live_keras_max_abs": 0.0
+  },
+  "latency": {
+    "batch_mode": true,
+    "sample_count": 4096,
+    "batch_latency_ms": 0.6222,
+    "per_sample_latency_ms": 0.000152
+  },
+  "keras_metrics": {
+    "accuracy": 0.968994,
+    "precision": 0.950321,
+    "recall": 0.860668,
+    "f1": 0.903275,
+    "confusion_matrix": [
+      [
+        3376,
+        31
+      ],
+      [
+        96,
+        593
+      ]
+    ],
+    "roc_auc": 0.985234
+  },
+  "tflite_metrics": {
+    "accuracy": 0.968994,
+    "precision": 0.950321,
+    "recall": 0.860668,
+    "f1": 0.903275,
+    "confusion_matrix": [
+      [
+        3376,
+        31
+      ],
+      [
+        96,
+        593
+      ]
+    ],
+    "roc_auc": 0.985234
+  },
+  "sample_predictions": [
+    {
+      "keras": 1.0,
+      "tflite": 1.0,
+      "label": 1
+    },
+    {
+      "keras": 0.0,
+      "tflite": 0.0,
+      "label": 0
+    },
+    {
+      "keras": 0.067246,
+      "tflite": 0.067246,
+      "label": 0
+    },
+    {
+      "keras": 0.037725,
+      "tflite": 0.037725,
+      "label": 0
+    },
+    {
+      "keras": 0.226665,
+      "tflite": 0.226665,
+      "label": 0
+    },
+    {
+      "keras": 0.989887,
+      "tflite": 0.989887,
+      "label": 1
+    },
+    {
+      "keras": 0.829303,
+      "tflite": 0.829303,
+      "label": 0
+    },
+    {
+      "keras": 0.001944,
+      "tflite": 0.001944,
+      "label": 0
+    },
+    {
+      "keras": 0.003473,
+      "tflite": 0.003473,
+      "label": 0
+    },
+    {
+      "keras": 0.0,
+      "tflite": 0.0,
+      "label": 0
+    }
+  ]
+}

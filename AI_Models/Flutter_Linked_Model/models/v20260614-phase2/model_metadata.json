@@ -1,0 +1,261 @@
+{
+  "model_version": "2026.06.13-prod",
+  "generated_at": "2026-06-13T16:42:57.286934Z",
+  "status": "trained",
+  "dataset_size": 418243,
+  "splits": {
+    "train": 292770,
+    "validation": 62736,
+    "test": 62737
+  },
+  "feature_count": 25,
+  "feature_names": [
+    "domain_id",
+    "pressure_bar",
+    "flow_rate_lpm",
+    "water_level_m",
+    "pipe_temp_c",
+    "leak_detected",
+    "vibration_hz",
+    "tilt_angle_deg",
+    "load_weight_ton",
+    "crack_index",
+    "temp_c",
+    "humidity_pct",
+    "co2_ppm",
+    "power_kwh",
+    "occupancy_count",
+    "smoke_level",
+    "soil_moisture_pct",
+    "soil_temp_c",
+    "air_temp_c",
+    "air_humidity_pct",
+    "irrigation_active",
+    "ndvi_index",
+    "battery_pct",
+    "rssi_dbm",
+    "snr_db"
+  ],
+  "runtime_feature_order": [
+    "domain_id",
+    "pressure_bar",
+    "flow_rate_lpm",
+    "water_level_m",
+    "pipe_temp_c",
+    "leak_detected",
+    "vibration_hz",
+    "tilt_angle_deg",
+    "load_weight_ton",
+    "crack_index",
+    "temp_c",
+    "humidity_pct",
+    "co2_ppm",
+    "power_kwh",
+    "occupancy_count",
+    "smoke_level",
+    "soil_moisture_pct",
+    "soil_temp_c",
+    "air_temp_c",
+    "air_humidity_pct",
+    "irrigation_active",
+    "ndvi_index",
+    "battery_pct",
+    "rssi_dbm",
+    "snr_db"
+  ],
+  "domain_ids": {
+    "water": 0,
+    "bridge": 1,
+    "building": 2,
+    "agriculture": 3
+  },
+  "thresholds": {
+    "anomaly": 0.35
+  },
+  "label_types": {
+    "0": "Normal",
+    "1": "Sensor Fault",
+    "2": "Infrastructure Issue",
+    "3": "Communication Issue",
+    "4": "Battery Critical"
+  },
+  "production_model": "models/production_anomaly_model.keras",
+  "validation_sample": "models/validation_sample.npz",
+  "performance": {
+    "candidate_models": {
+      "Random Forest": {
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.999984,
+          "precision": 1.0,
+          "recall": 0.999738,
+          "f1": 0.999869,
+          "confusion_matrix": [
+            [
+              58919,
+              0
+            ],
+            [
+              1,
+              3816
+            ]
+          ],
+          "auc_roc": 1.0
+        },
+        "runtime_seconds": 2.354,
+        "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+      },
+      "Gradient Boosting": {
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.999904,
+          "precision": 0.999738,
+          "recall": 0.99869,
+          "f1": 0.999214,
+          "confusion_matrix": [
+            [
+              58918,
+              1
+            ],
+            [
+              5,
+              3812
+            ]
+          ],
+          "auc_roc": 1.0
+        },
+        "runtime_seconds": 99.79,
+        "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+      },
+      "XGBoost": {
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.999936,
+          "precision": 1.0,
+          "recall": 0.998952,
+          "f1": 0.999476,
+          "confusion_matrix": [
+            [
+              58919,
+              0
+            ],
+            [
+              4,
+              3813
+            ]
+          ],
+          "auc_roc": 1.0
+        },
+        "runtime_seconds": 0.892,
+        "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+      },
+      "LightGBM": {
+        "status": "trained",
+        "metrics": {
+          "accuracy": 0.999936,
+          "precision": 0.999476,
+          "recall": 0.999476,
+          "f1": 0.999476,
+          "confusion_matrix": [
+            [
+              58917,
+              2
+            ],
+            [
+              2,
+              3815
+            ]
+          ],
+          "auc_roc": 1.0
+        },
+        "runtime_seconds": 2.194,
+        "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+      }
+    },
+    "selected_model": {
+      "model_type": "Dense Neural Network",
+      "model_path": "models/production_anomaly_model.keras",
+      "threshold": 0.35,
+      "metrics": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "confusion_matrix": [
+          [
+            59101,
+            0
+          ],
+          [
+            0,
+            3636
+          ]
+        ],
+        "auc_roc": 1.0
+      },
+      "runtime_seconds": 6.282,
+      "mobile_suitability": "selected: compact dense Keras model with embedded normalization; directly convertible to TFLite"
+    },
+    "signal_predictor": {
+      "status": "trained",
+      "algorithm": "RandomForestRegressor",
+      "metrics": {
+        "mae": 2.701394,
+        "rmse": 4.51434,
+        "max_abs_error": 47.432622
+      },
+      "model_path": "models/signal_predictor.pkl",
+      "runtime_seconds": 38.404
+    },
+    "alert_scorer": {
+      "status": "trained",
+      "model_path": "models/alert_scorer.keras",
+      "metrics": {
+        "accuracy": 0.997896,
+        "f1_macro": 0.988972,
+        "confusion_matrix": [
+          [
+            59101,
+            0,
+            0,
+            0
+          ],
+          [
+            21,
+            1441,
+            3,
+            0
+          ],
+          [
+            108,
+            0,
+            1541,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            522
+          ]
+        ]
+      },
+      "classes": {
+        "0": "False Alarm",
+        "1": "Info",
+        "2": "Warning",
+        "3": "Critical",
+        "4": "Emergency"
+      },
+      "runtime_seconds": 2.339
+    }
+  },
+  "library_versions": {
+    "python": "3.11.2 (tags/v3.11.2:878ead1, Feb  7 2023, 16:38:35) [MSC v.1934 64 bit (AMD64)]",
+    "pandas": "3.0.3",
+    "numpy": "2.4.6",
+    "sklearn": "1.9.0",
+    "tensorflow": "2.21.0"
+  },
+  "runtime_seconds": 158.014
+}

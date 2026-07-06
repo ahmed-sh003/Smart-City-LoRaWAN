@@ -1,0 +1,266 @@
+{
+  "overallStatus": "high",
+  "featuresDrifted": 3,
+  "highDriftFeatures": 2,
+  "mediumDriftFeatures": 1,
+  "topFeatureDrift": [
+    {
+      "feature": "humidity_pct",
+      "psi": 1.239472,
+      "ks": 0.143597,
+      "referenceMean": 23.564873,
+      "liveMean": 22.123755,
+      "status": "high"
+    },
+    {
+      "feature": "battery_pct",
+      "psi": 0.377907,
+      "ks": 0.177977,
+      "referenceMean": 87.201569,
+      "liveMean": 88.190819,
+      "status": "high"
+    },
+    {
+      "feature": "temp_c",
+      "psi": 0.112649,
+      "ks": 0.081611,
+      "referenceMean": 12.814703,
+      "liveMean": 12.797158,
+      "status": "medium"
+    },
+    {
+      "feature": "air_humidity_pct",
+      "psi": 0.04491,
+      "ks": 0.051327,
+      "referenceMean": 14.035057,
+      "liveMean": 13.652966,
+      "status": "low"
+    },
+    {
+      "feature": "water_level_m",
+      "psi": 0.034734,
+      "ks": 0.048279,
+      "referenceMean": 0.798444,
+      "liveMean": 0.780453,
+      "status": "low"
+    },
+    {
+      "feature": "pipe_temp_c",
+      "psi": 0.024129,
+      "ks": 0.036173,
+      "referenceMean": 5.752952,
+      "liveMean": 5.811749,
+      "status": "low"
+    },
+    {
+      "feature": "air_temp_c",
+      "psi": 0.018331,
+      "ks": 0.031062,
+      "referenceMean": 6.74559,
+      "liveMean": 6.789475,
+      "status": "low"
+    },
+    {
+      "feature": "soil_temp_c",
+      "psi": 0.017786,
+      "ks": 0.032051,
+      "referenceMean": 6.24297,
+      "liveMean": 6.286518,
+      "status": "low"
+    }
+  ],
+  "allFeatures": [
+    {
+      "feature": "humidity_pct",
+      "psi": 1.239472,
+      "ks": 0.143597,
+      "referenceMean": 23.564873,
+      "liveMean": 22.123755,
+      "status": "high"
+    },
+    {
+      "feature": "battery_pct",
+      "psi": 0.377907,
+      "ks": 0.177977,
+      "referenceMean": 87.201569,
+      "liveMean": 88.190819,
+      "status": "high"
+    },
+    {
+      "feature": "temp_c",
+      "psi": 0.112649,
+      "ks": 0.081611,
+      "referenceMean": 12.814703,
+      "liveMean": 12.797158,
+      "status": "medium"
+    },
+    {
+      "feature": "air_humidity_pct",
+      "psi": 0.04491,
+      "ks": 0.051327,
+      "referenceMean": 14.035057,
+      "liveMean": 13.652966,
+      "status": "low"
+    },
+    {
+      "feature": "water_level_m",
+      "psi": 0.034734,
+      "ks": 0.048279,
+      "referenceMean": 0.798444,
+      "liveMean": 0.780453,
+      "status": "low"
+    },
+    {
+      "feature": "pipe_temp_c",
+      "psi": 0.024129,
+      "ks": 0.036173,
+      "referenceMean": 5.752952,
+      "liveMean": 5.811749,
+      "status": "low"
+    },
+    {
+      "feature": "air_temp_c",
+      "psi": 0.018331,
+      "ks": 0.031062,
+      "referenceMean": 6.74559,
+      "liveMean": 6.789475,
+      "status": "low"
+    },
+    {
+      "feature": "soil_temp_c",
+      "psi": 0.017786,
+      "ks": 0.032051,
+      "referenceMean": 6.24297,
+      "liveMean": 6.286518,
+      "status": "low"
+    },
+    {
+      "feature": "soil_moisture_pct",
+      "psi": 0.007649,
+      "ks": 0.025126,
+      "referenceMean": 13.74805,
+      "liveMean": 13.987626,
+      "status": "low"
+    },
+    {
+      "feature": "ndvi_index",
+      "psi": 0.001778,
+      "ks": 0.02659,
+      "referenceMean": 0.169663,
+      "liveMean": 0.172695,
+      "status": "low"
+    },
+    {
+      "feature": "power_kwh",
+      "psi": 0.001168,
+      "ks": 0.02338,
+      "referenceMean": 1.286329,
+      "liveMean": 1.22173,
+      "status": "low"
+    },
+    {
+      "feature": "flow_rate_lpm",
+      "psi": 0.000633,
+      "ks": 0.012861,
+      "referenceMean": 33.085667,
+      "liveMean": 32.632496,
+      "status": "low"
+    },
+    {
+      "feature": "rssi_dbm",
+      "psi": 0.000397,
+      "ks": 0.005931,
+      "referenceMean": -73.05291,
+      "liveMean": -73.10968,
+      "status": "low"
+    },
+    {
+      "feature": "vibration_hz",
+      "psi": 0.000241,
+      "ks": 0.004147,
+      "referenceMean": 4.150371,
+      "liveMean": 4.135011,
+      "status": "low"
+    },
+    {
+      "feature": "load_weight_ton",
+      "psi": 0.000204,
+      "ks": 0.004089,
+      "referenceMean": 3.202443,
+      "liveMean": 3.163592,
+      "status": "low"
+    },
+    {
+      "feature": "snr_db",
+      "psi": 0.000125,
+      "ks": 0.002345,
+      "referenceMean": 8.192425,
+      "liveMean": 8.190375,
+      "status": "low"
+    },
+    {
+      "feature": "tilt_angle_deg",
+      "psi": 8.7e-05,
+      "ks": 0.00286,
+      "referenceMean": 0.100387,
+      "liveMean": 0.112406,
+      "status": "low"
+    },
+    {
+      "feature": "occupancy_count",
+      "psi": 5.8e-05,
+      "ks": 0.001631,
+      "referenceMean": 4.311732,
+      "liveMean": 4.319418,
+      "status": "low"
+    },
+    {
+      "feature": "crack_index",
+      "psi": 5.1e-05,
+      "ks": 0.002102,
+      "referenceMean": 0.016326,
+      "liveMean": 0.01617,
+      "status": "low"
+    },
+    {
+      "feature": "co2_ppm",
+      "psi": 4e-05,
+      "ks": 0.002303,
+      "referenceMean": 186.311264,
+      "liveMean": 186.246674,
+      "status": "low"
+    },
+    {
+      "feature": "leak_detected",
+      "psi": 6e-06,
+      "ks": 0.000193,
+      "referenceMean": 0.006728,
+      "liveMean": 0.006535,
+      "status": "low"
+    },
+    {
+      "feature": "smoke_level",
+      "psi": 5e-06,
+      "ks": 0.001497,
+      "referenceMean": 18.233747,
+      "liveMean": 18.051134,
+      "status": "low"
+    },
+    {
+      "feature": "pressure_bar",
+      "psi": 1e-06,
+      "ks": 0.001014,
+      "referenceMean": 1.234797,
+      "liveMean": 1.235443,
+      "status": "low"
+    },
+    {
+      "feature": "irrigation_active",
+      "psi": 0.0,
+      "ks": 0.0,
+      "referenceMean": 0.0,
+      "liveMean": 0.0,
+      "status": "low"
+    }
+  ]
+}

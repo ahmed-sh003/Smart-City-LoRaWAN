@@ -1,0 +1,47 @@
+{
+  "step": 1,
+  "generated_at": "2026-06-13T16:05:08.201079Z",
+  "firebase": {
+    "credentials_configured": false,
+    "database_url_configured": false,
+    "real_telemetry_rows": 0,
+    "real_status_rows": 0,
+    "real_gateway_rows": 0,
+    "real_alert_rows": 0
+  },
+  "parameters": {
+    "days": 365,
+    "interval_minutes": 5,
+    "anomaly_rate": 0.065,
+    "seed": 20260613
+  },
+  "rows": {
+    "nodes_telemetry": 420480,
+    "nodes_status": 4,
+    "gateways": 105120,
+    "alerts_history": 27318,
+    "labeled_anomalies": 420480,
+    "domains": 5
+  },
+  "domain_distribution": {
+    "water": 105120,
+    "bridge": 105120,
+    "building": 105120,
+    "agriculture": 105120
+  },
+  "label_distribution": {
+    "0": 393162,
+    "2": 11349,
+    "3": 6619,
+    "1": 5510,
+    "4": 3840
+  },
+  "outputs": {
+    "nodes_telemetry": "data\\raw\\nodes_telemetry.csv",
+    "nodes_status": "data\\raw\\nodes_status.csv",
+    "gateways": "data\\raw\\gateways.csv",
+    "alerts_history": "data\\raw\\alerts_history.csv",
+    "labeled_anomalies": "data\\raw\\labeled_anomalies.csv",
+    "domains": "data\\raw\\domains.csv"
+  }
+}

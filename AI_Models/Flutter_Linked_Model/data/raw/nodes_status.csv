@@ -1,0 +1,5 @@
+node_id,domain,online,battery_pct,rssi_dbm,snr_db,last_seen,firmware_version,health_state
+agriculture_node_001,agriculture,1,86.99,-74.67,9.2,2026-06-13T16:00:00Z,synthetic-1.0.0,healthy
+bridge_node_001,bridge,0,87.18,-107.37,-5.19,2026-06-13T16:00:00Z,synthetic-1.0.0,attention
+building_node_001,building,1,91.56,-67.95,8.89,2026-06-13T16:00:00Z,synthetic-1.0.0,healthy
+water_node_001,water,1,92.04,-70.61,7.4,2026-06-13T16:00:00Z,synthetic-1.0.0,healthy

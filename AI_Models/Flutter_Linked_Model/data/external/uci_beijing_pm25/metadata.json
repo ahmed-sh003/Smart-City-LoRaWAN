@@ -1,0 +1,20 @@
+{
+  "id": "uci_beijing_pm25",
+  "source_url": "https://archive.ics.uci.edu/dataset/381/beijing%2Bpm2%2B5%2Bdata",
+  "downloaded_at": "2026-06-14T06:21:47.427964Z",
+  "rows": 43824,
+  "columns": [
+    "year",
+    "month",
+    "day",
+    "hour",
+    "DEWP",
+    "TEMP",
+    "PRES",
+    "cbwd",
+    "Iws",
+    "Is",
+    "Ir",
+    "pm2.5"
+  ]
+}

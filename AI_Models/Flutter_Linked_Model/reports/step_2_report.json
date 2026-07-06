@@ -1,0 +1,35 @@
+{
+  "step": 2,
+  "input_rows": 420480,
+  "duplicates_removed": 0,
+  "clean_rows": 418243,
+  "engineered_rows": 418243,
+  "features": 288,
+  "missing_before": {
+    "missing_cells": 0,
+    "total_cells": 3679200,
+    "missing_pct": 0.0
+  },
+  "missing_after": {
+    "missing_cells": 0,
+    "total_cells": 3659917,
+    "missing_pct": 0.0
+  },
+  "class_distribution": {
+    "0": 393162,
+    "2": 11349,
+    "3": 6619,
+    "4": 3840,
+    "1": 3273
+  },
+  "outputs": {
+    "clean_telemetry_all": "data\\processed\\clean_telemetry_all.csv",
+    "features_engineered": {
+      "parquet_written": false,
+      "path": "data\\processed\\features_engineered.csv",
+      "reason": "No module named 'pandas'"
+    },
+    "feature_metadata": "data\\processed\\feature_metadata.json",
+    "class_distribution": "data\\processed\\class_distribution.json"
+  }
+}

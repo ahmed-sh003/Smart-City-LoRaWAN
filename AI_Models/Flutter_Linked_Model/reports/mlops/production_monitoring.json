@@ -1,0 +1,17 @@
+{
+  "backend": "keras",
+  "backendError": null,
+  "inferenceCount": 62736,
+  "referenceRows": 355507,
+  "liveRows": 62736,
+  "averageScore": 0.058879,
+  "p95Score": 0.999892,
+  "threshold": 0.35,
+  "latencyMs": 0.066382,
+  "errorRate": 0,
+  "predictionDistribution": {
+    "normal": 59098,
+    "watch": 3,
+    "anomaly": 3635
+  }
+}

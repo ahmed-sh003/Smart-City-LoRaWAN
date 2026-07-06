@@ -1,0 +1,9 @@
+firebase-admin==6.5.0
+pandas==3.0.3
+numpy==2.4.6
+pyarrow==24.0.0
+scikit-learn==1.9.0
+scipy==1.17.1
+python-dateutil==2.9.0.post0
+tqdm==4.68.2
+rich==15.0.0

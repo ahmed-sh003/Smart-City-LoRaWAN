@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-13T16:49:48.855358Z",
+  "status": "passed",
+  "model_version": "2026.06.13-prod",
+  "sample_count": 2048,
+  "threshold": 0.35,
+  "model_size_bytes": 9668,
+  "deviation": {
+    "max_abs": 0.00096935,
+    "mean_abs": 4.37e-06,
+    "p95_abs": 1.494e-05,
+    "accepted_max_abs": 0.01,
+    "stored_vs_live_keras_max_abs": 1e-08
+  },
+  "latency": {
+    "batch_mode": true,
+    "sample_count": 2048,
+    "batch_latency_ms": 0.1639,
+    "per_sample_latency_ms": 0.0019,
+    "input_shape": [
+      2048,
+      25
+    ],
+    "latency_input_shape": [
+      1,
+      25
+    ],
+    "output_shape": [
+      2048,
+      1
+    ]
+  },
+  "keras_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "tflite_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "environment": {
+    "tensorflow": "2.21.0",
+    "numpy": "2.4.6"
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "feature": "pollution_score",
+    "meanAbsShap": 0.087168
+  },
+  {
+    "feature": "global_risk_score",
+    "meanAbsShap": 0.051995
+  },
+  {
+    "feature": "air_quality_score",
+    "meanAbsShap": 0.026017
+  },
+  {
+    "feature": "domain_id",
+    "meanAbsShap": 0.024091
+  },
+  {
+    "feature": "leak_probability_feature",
+    "meanAbsShap": 0.022903
+  },
+  {
+    "feature": "drought_score",
+    "meanAbsShap": 0.011581
+  },
+  {
+    "feature": "battery_pct",
+    "meanAbsShap": 0.004554
+  },
+  {
+    "feature": "structural_stress_score",
+    "meanAbsShap": 0.003363
+  },
+  {
+    "feature": "packet_loss_rate",
+    "meanAbsShap": 0.002133
+  },
+  {
+    "feature": "rssi_dbm",
+    "meanAbsShap": 0.001446
+  }
+]

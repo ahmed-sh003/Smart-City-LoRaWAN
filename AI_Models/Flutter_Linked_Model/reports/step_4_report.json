@@ -1,0 +1,426 @@
+{
+  "step": 4,
+  "status": "complete",
+  "generated_at": "2026-06-13T16:49:34.393076Z",
+  "tensorflow_version": "2.21.0",
+  "numpy_version": "2.4.6",
+  "conversions": {
+    "production_anomaly": {
+      "status": "converted",
+      "name": "production_anomaly",
+      "keras_model": "models\\production_anomaly_model.keras",
+      "outputs": [
+        {
+          "path": "model\\production_model.tflite",
+          "size_bytes": 9668
+        },
+        {
+          "path": "assets\\ml_models\\production_model.tflite",
+          "size_bytes": 9668
+        }
+      ],
+      "quantization": "float16_weights_float32_io",
+      "conversion_seconds": 0.365,
+      "interpreter_test": {
+        "ok": true,
+        "input_shape": [
+          1,
+          25
+        ],
+        "input_dtype": "<class 'numpy.float32'>",
+        "output_shape": [
+          1,
+          1
+        ],
+        "output_dtype": "<class 'numpy.float32'>",
+        "sample_output": [
+          0.999938
+        ],
+        "single_inference_ms": 0.0202
+      }
+    },
+    "alert_scorer": {
+      "status": "converted",
+      "name": "alert_scorer",
+      "keras_model": "models\\alert_scorer.keras",
+      "outputs": [
+        {
+          "path": "model\\alert_scorer.tflite",
+          "size_bytes": 8452
+        },
+        {
+          "path": "assets\\ml_models\\alert_scorer.tflite",
+          "size_bytes": 8452
+        }
+      ],
+      "quantization": "float16_weights_float32_io",
+      "conversion_seconds": 0.27,
+      "interpreter_test": {
+        "ok": true,
+        "input_shape": [
+          1,
+          25
+        ],
+        "input_dtype": "<class 'numpy.float32'>",
+        "output_shape": [
+          1,
+          5
+        ],
+        "output_dtype": "<class 'numpy.float32'>",
+        "sample_output": [
+          0.100647,
+          0.000739,
+          0.115259,
+          0.779,
+          0.004356
+        ],
+        "single_inference_ms": 0.0091
+      }
+    }
+  },
+  "config_path": "assets/ml_models/model_config.json",
+  "deployment_paths": {
+    "production_model": [
+      "model\\production_model.tflite",
+      "assets\\ml_models\\production_model.tflite"
+    ],
+    "alert_scorer": [
+      "model\\alert_scorer.tflite",
+      "assets\\ml_models\\alert_scorer.tflite"
+    ]
+  },
+  "legacy_placeholder_cleanup": {
+    "removed": [
+      "assets\\ml_models\\anomaly_water.tflite",
+      "assets\\ml_models\\anomaly_bridge.tflite",
+      "assets\\ml_models\\anomaly_building.tflite",
+      "assets\\ml_models\\anomaly_agriculture.tflite",
+      "assets\\ml_models\\maintenance_predictor.tflite"
+    ],
+    "kept_non_placeholder": []
+  },
+  "config": {
+    "model_version": "2026.06.13-prod",
+    "generated_at": "2026-06-13T16:49:34.392863Z",
+    "feature_order": [
+      "domain_id",
+      "pressure_bar",
+      "flow_rate_lpm",
+      "water_level_m",
+      "pipe_temp_c",
+      "leak_detected",
+      "vibration_hz",
+      "tilt_angle_deg",
+      "load_weight_ton",
+      "crack_index",
+      "temp_c",
+      "humidity_pct",
+      "co2_ppm",
+      "power_kwh",
+      "occupancy_count",
+      "smoke_level",
+      "soil_moisture_pct",
+      "soil_temp_c",
+      "air_temp_c",
+      "air_humidity_pct",
+      "irrigation_active",
+      "ndvi_index",
+      "battery_pct",
+      "rssi_dbm",
+      "snr_db"
+    ],
+    "runtime_feature_order": [
+      "domain_id",
+      "pressure_bar",
+      "flow_rate_lpm",
+      "water_level_m",
+      "pipe_temp_c",
+      "leak_detected",
+      "vibration_hz",
+      "tilt_angle_deg",
+      "load_weight_ton",
+      "crack_index",
+      "temp_c",
+      "humidity_pct",
+      "co2_ppm",
+      "power_kwh",
+      "occupancy_count",
+      "smoke_level",
+      "soil_moisture_pct",
+      "soil_temp_c",
+      "air_temp_c",
+      "air_humidity_pct",
+      "irrigation_active",
+      "ndvi_index",
+      "battery_pct",
+      "rssi_dbm",
+      "snr_db"
+    ],
+    "feature_count": 25,
+    "input_shape": [
+      1,
+      25
+    ],
+    "domain_ids": {
+      "water": 0,
+      "bridge": 1,
+      "building": 2,
+      "agriculture": 3
+    },
+    "thresholds": {
+      "anomaly": 0.35,
+      "fallback_heuristic": 0.58
+    },
+    "models": {
+      "production_anomaly": "assets/ml_models/production_model.tflite",
+      "alert_scorer": "assets/ml_models/alert_scorer.tflite"
+    },
+    "performance": {
+      "candidate_models": {
+        "Random Forest": {
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999984,
+            "precision": 1.0,
+            "recall": 0.999738,
+            "f1": 0.999869,
+            "confusion_matrix": [
+              [
+                58919,
+                0
+              ],
+              [
+                1,
+                3816
+              ]
+            ],
+            "auc_roc": 1.0
+          },
+          "runtime_seconds": 2.354,
+          "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+        },
+        "Gradient Boosting": {
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999904,
+            "precision": 0.999738,
+            "recall": 0.99869,
+            "f1": 0.999214,
+            "confusion_matrix": [
+              [
+                58918,
+                1
+              ],
+              [
+                5,
+                3812
+              ]
+            ],
+            "auc_roc": 1.0
+          },
+          "runtime_seconds": 99.79,
+          "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+        },
+        "XGBoost": {
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999936,
+            "precision": 1.0,
+            "recall": 0.998952,
+            "f1": 0.999476,
+            "confusion_matrix": [
+              [
+                58919,
+                0
+              ],
+              [
+                4,
+                3813
+              ]
+            ],
+            "auc_roc": 1.0
+          },
+          "runtime_seconds": 0.892,
+          "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+        },
+        "LightGBM": {
+          "status": "trained",
+          "metrics": {
+            "accuracy": 0.999936,
+            "precision": 0.999476,
+            "recall": 0.999476,
+            "f1": 0.999476,
+            "confusion_matrix": [
+              [
+                58917,
+                2
+              ],
+              [
+                2,
+                3815
+              ]
+            ],
+            "auc_roc": 1.0
+          },
+          "runtime_seconds": 2.194,
+          "mobile_suitability": "server-side/offline artifact; not directly TFLite deployable"
+        }
+      },
+      "selected_model": {
+        "model_type": "Dense Neural Network",
+        "model_path": "models/production_anomaly_model.keras",
+        "threshold": 0.35,
+        "metrics": {
+          "accuracy": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion_matrix": [
+            [
+              59101,
+              0
+            ],
+            [
+              0,
+              3636
+            ]
+          ],
+          "auc_roc": 1.0
+        },
+        "runtime_seconds": 6.282,
+        "mobile_suitability": "selected: compact dense Keras model with embedded normalization; directly convertible to TFLite"
+      },
+      "signal_predictor": {
+        "status": "trained",
+        "algorithm": "RandomForestRegressor",
+        "metrics": {
+          "mae": 2.701394,
+          "rmse": 4.51434,
+          "max_abs_error": 47.432622
+        },
+        "model_path": "models/signal_predictor.pkl",
+        "runtime_seconds": 38.404
+      },
+      "alert_scorer": {
+        "status": "trained",
+        "model_path": "models/alert_scorer.keras",
+        "metrics": {
+          "accuracy": 0.997896,
+          "f1_macro": 0.988972,
+          "confusion_matrix": [
+            [
+              59101,
+              0,
+              0,
+              0
+            ],
+            [
+              21,
+              1441,
+              3,
+              0
+            ],
+            [
+              108,
+              0,
+              1541,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              522
+            ]
+          ]
+        },
+        "classes": {
+          "0": "False Alarm",
+          "1": "Info",
+          "2": "Warning",
+          "3": "Critical",
+          "4": "Emergency"
+        },
+        "runtime_seconds": 2.339
+      }
+    },
+    "conversion": {
+      "production_anomaly": {
+        "status": "converted",
+        "name": "production_anomaly",
+        "keras_model": "models\\production_anomaly_model.keras",
+        "outputs": [
+          {
+            "path": "model\\production_model.tflite",
+            "size_bytes": 9668
+          },
+          {
+            "path": "assets\\ml_models\\production_model.tflite",
+            "size_bytes": 9668
+          }
+        ],
+        "quantization": "float16_weights_float32_io",
+        "conversion_seconds": 0.365,
+        "interpreter_test": {
+          "ok": true,
+          "input_shape": [
+            1,
+            25
+          ],
+          "input_dtype": "<class 'numpy.float32'>",
+          "output_shape": [
+            1,
+            1
+          ],
+          "output_dtype": "<class 'numpy.float32'>",
+          "sample_output": [
+            0.999938
+          ],
+          "single_inference_ms": 0.0202
+        }
+      },
+      "alert_scorer": {
+        "status": "converted",
+        "name": "alert_scorer",
+        "keras_model": "models\\alert_scorer.keras",
+        "outputs": [
+          {
+            "path": "model\\alert_scorer.tflite",
+            "size_bytes": 8452
+          },
+          {
+            "path": "assets\\ml_models\\alert_scorer.tflite",
+            "size_bytes": 8452
+          }
+        ],
+        "quantization": "float16_weights_float32_io",
+        "conversion_seconds": 0.27,
+        "interpreter_test": {
+          "ok": true,
+          "input_shape": [
+            1,
+            25
+          ],
+          "input_dtype": "<class 'numpy.float32'>",
+          "output_shape": [
+            1,
+            5
+          ],
+          "output_dtype": "<class 'numpy.float32'>",
+          "sample_output": [
+            0.100647,
+            0.000739,
+            0.115259,
+            0.779,
+            0.004356
+          ],
+          "single_inference_ms": 0.0091
+        }
+      }
+    },
+    "runtime_behavior": {
+      "native_flutter": "uses production_anomaly TFLite for anomaly scores",
+      "web_flutter": "uses deterministic fallback because tflite_flutter does not provide a web interpreter"
+    }
+  }
+}
